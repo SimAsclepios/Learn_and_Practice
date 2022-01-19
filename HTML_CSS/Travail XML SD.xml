@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Exercice XML Debuire Simon -->
+<!-- Entreprise de vente de fruits et légumes VicFruit -->
+
+<entreprise nom="VicFruit">
+
+	<nom> VicFruit </nom>
+	<description lang="FR"><![CDATA[Installée à LONGUENESSE, elle est spécialisée dans le secteur d'activité du commerce de détail de fruits et légumes. Elle comporte 4 salariés. Sur l'année 2020 elle réalise un chiffre d'affaires de 412 400 €.]]></description>
+	<description lang="EN"><![CDATA[Based in LONGUENESSE, it specializes in the fruit and vegetable retail trade sector. It has 4 employees. Over the year 2020, it achieves a turnover of €412 400.]]></description>
+	<description lang="ES"><![CDATA[Situado en LONGUENESSE, está especializada en el sector comercial minorista de frutas y legumbres. Tiene 4 empleados. Durante el año 2020 alcanza una facturación de 412.400 €.]]></description>
+	
+	<creation> 26/05/2015 </creation>
+	<siret> 43258125400039 </siret>
+	<tva> FR77432581254 </tva>
+	<rcs> Boulogne B 432 581 254 </rcs>
+	<categorie> Commerce de détail
+		<activite> Commerce de détail de fruits et légumes en magasin spécialisé
+			<ape> 4721Z </ape>
+		</activite>
+	</categorie>
+
+	<adresse>
+		<rue> PL de la Melodie  </rue>
+		<ville> LONGUENESSE </ville>
+		<cp> 62219 </cp>
+	</adresse>
+	<url> https://www.societe.vicfruit.html </url>
+	
+	<stat>
+	<ca annee="2015"> 37500 </ca>
+	<ca annee="2016"> 75600 </ca>
+	<ca annee="2017"> 156200 </ca>
+	<ca annee="2018"> 249800 </ca>
+	<ca annee="2019"> 329800 </ca>
+	<ca annee="2020"> 412400 </ca>
+		<vente>
+			<quantite>
+				<annee type="2015">
+					<fruit> 4520 kg </fruit>
+					<legume> 0 <legume>
+					<total> 4520 kg </total>
+				</annee>
+				<annee type="2016">
+					<fruit> 9670 kg </fruit>
+					<legume> 0 <legume>
+					<total> 9670 kg </total>
+				</annee>
+				<annee type="2017">
+					<fruit> 12760 kg </fruit>
+					<legume> 2680 kg <legume>
+					<total> 15440 kg </total>
+				</annee>
+				<annee type="2018">
+					<fruit> 16440 kg </fruit>
+					<legume> 8560 kg <legume>
+					<total> 25000 kg </total>
+				</annee>
+				<annee type="2019">
+					<fruit> 21560 kg </fruit>
+					<legume> 16510 kg <legume>
+					<total> 38070 kg </total>
+				</annee>
+				<annee type="2020">
+					<fruit> 26490 kg </fruit>
+					<legume> 22370 kg <legume>
+					<total> 48860 kg </total>
+				</annee>
+			</quantite>
+		</vente>
+	<stat>
+	
+	<effectif> 4 </effectif>
+	<employes>
+		<employe id="1">
+			<nom> Robert </nom>
+			<prenom> Pierre </prenom>
+			<date type="naissance"> 28/02/1986 </date>
+			<date type="embauche"> 26/05/2015 </date>
+			<poste> Directeur </poste>
+			<contrat> CDI </contrat>
+			<adresse>
+				<rue> 22 rue Eugène Varlin </rue>
+				<ville> Longuenesse </ville>
+				<cp> 62219 </cp>
+			</adresse>
+			<contact>
+				<mail> pierrebeber@yaouh.com </mail>
+				<tel> 0686452381 </tel>
+			</contact>
+		</employe>
+		<employe id="4">
+			<nom> Dupond </nom>
+			<prenom> Pascal </prenom>
+			<date type="naissance"> 16/06/1982 </date>
+			<date type="embauche"> 26/05/2015 </date>
+			<poste> vendeur </poste>
+			<contrat> CDI </contrat>
+			<adresse>
+				<rue> 36 rue de Dunkerque </rue>
+				<ville> Saint-Omer </ville>
+				<cp> 62500 </cp>
+			</adresse>
+			<contact>
+				<mail> pacalst@gmail.com </mail>
+				<tel> 0665842381 </tel>
+			</contact>		
+		</employe>
+		<employe id="3">
+			<nom> Godfroid </nom>
+			<prenom> Léa </prenom>
+			<date type="naissance"> 06/11/1992</date>
+			<date type="embauche"> 15/06/2018 </date>
+			<poste> vendeuse </poste>
+			<contrat> CDI </contrat>
+			<adresse>
+				<rue> 76 rue des Clouteries </rue>
+				<ville> Saint-Omer </ville>
+				<cp> 62500 </cp>
+			</adresse>
+			<contact>
+				<mail> leagodfroid@gmail.com </mail>
+				<tel> 0646189246 </tel>
+			</contact>
+		</employe>
+		
+		<employe id="4">
+			<nom> Durand </nom>
+			<prenom> Philippine </prenom>
+			<date type="naissance"> 06/11/1992</date>
+			<date type="embauche"> 15/06/2018 </date>
+			<poste> vendeuse </poste>
+			<contrat> CDD </contrat>
+			<adresse>
+				<rue> 12 rue des Barrières </rue>
+				<ville> Tatinghem </ville>
+				<cp> 62500 </cp>
+			</adresse>
+			<contact>
+				<mail> philippinedurand@gmail.com </mail>
+				<tel> 0632698452 </tel>
+			</contact>
+		</employe>
+	<employes>
+	
+	<produits>
+		<fruits>
+			<fruit id="1">
+			<nom> Fraise </nom>
+			<!--prix type="kg"> 12 </prix>
+			<prix type="250g"> 3 </prix>
+			<prix type="Unitaire"> </prix-->
+			
+			<fruit id="2"> Abricot </fruit>
+			<fruit id="3"> Avocat </fruit>
+			<fruit id="4"> Cerise </fruit>
+			<fruit id="5"> Framboise </fruit>
+			<fruit id="15"> Kiwi </fruit>
+			<fruit id="6"> Mandarine </fruit>
+			<fruit id="7"> Mangue </fruit>
+			<fruit id="8"> Melon </fruit>
+			<fruit id="9"> Nectarine </fruit>
+			<fruit id="10"> Orange </fruit>
+			<fruit id="11"> Pamplemousse </fruit>
+			<fruit id="12"> Pastèque </fruit>
+			<fruit id="13"> Pêche </fruit>
+			<fruit id="14"> Poire </fruit>
+			<fruit id="16"> Pomme </fruit>
+			<fruit id="17"> Prune </fruit>
+			<fruit id="18"> Raisin </fruit>
+			<fruit id="19"> Tomate </fruit>
+			<fruit id="20"> Tomate-Cerise </fruit>
+		</fruits>
+		<legumes>
+			<legume id="1"> Ail </legume>
+			<legume id="2"> Artichaud </legume>
+			<legume id="3"> Aubergine </legume>
+			<legume id="4"> Betterave </legume>
+			<legume id="5"> Brocoli </legume>
+			<legume id="6"> Carotte </legume>
+			<legume id="7"> Céleri </legume>
+			<legume id="8"> Champignon </legume>
+			<legume id="9"> Chou-Fleur </legume>
+			<legume id="10"> Concombre </legume>
+			<legume id="11"> Courgette </legume>
+			<legume id="12"> Cresson </legume>
+			<legume id="13"> Echalote </legume>
+			<legume id="14"> Haricot </legume>
+			<legume id="15"> Laitue </legume>
+			<legume id="16"> Navet </legume>
+			<legume id="17"> Oignon </legume>
+			<legume id="18"> Patate </legume>
+			<legume id="19"> Petit Pois </legume>
+			<legume id="20"> Poireau </legume>
+		</legumes>
+	</produits>
+			
+	<fournisseurs>
+		<nom id="1"> Serre de Serques </nom>
+		<nom id="2"> Le Potager de Bob </nom>
+		<nom id="3"> Jardin d'min coin </nom>
+	</fournisseurs>
+</entreprise>
+
+
