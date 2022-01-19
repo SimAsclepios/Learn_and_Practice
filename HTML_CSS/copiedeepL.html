@@ -1,0 +1,1501 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+
+    <title>DeepL Traduction – DeepL Translate : le meilleur traducteur au monde</title>
+
+    <meta name="description"
+        content="Traduisez des textes et des documents complets en un instant. Des traductions précises accessibles aux utilisateurs uniques et aux équipes. Des millions de personnes utilisent DeepL chaque jour." />
+    <link rel="canonical" href="https://www.deepl.com/translator" />
+
+    <link rel="alternate" hreflang="en" href="https://www.deepl.com/en/translator" />
+    <link rel="alternate" hreflang="de" href="https://www.deepl.com/de/translator" />
+    <link rel="alternate" hreflang="fr" href="https://www.deepl.com/fr/translator" />
+    <link rel="alternate" hreflang="es" href="https://www.deepl.com/es/translator" />
+    <link rel="alternate" hreflang="ja" href="https://www.deepl.com/ja/translator" />
+    <link rel="alternate" hreflang="pt-PT" href="https://www.deepl.com/pt-PT/translator" />
+    <link rel="alternate" hreflang="pt-BR" href="https://www.deepl.com/pt-BR/translator" />
+    <link rel="alternate" hreflang="it" href="https://www.deepl.com/it/translator" />
+    <link rel="alternate" hreflang="nl" href="https://www.deepl.com/nl/translator" />
+    <link rel="alternate" hreflang="pl" href="https://www.deepl.com/pl/translator" />
+    <link rel="alternate" hreflang="ru" href="https://www.deepl.com/ru/translator" />
+    <link rel="alternate" hreflang="zh" href="https://www.deepl.com/zh/translator" />
+    <link rel="alternate" hreflang="sv" href="https://www.deepl.com/sv/translator" />
+    <link rel="alternate" hreflang="x-default" href="https://www.deepl.com/translator" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=no" />
+    <link rel="icon" type="image/png" href="/img/favicon/favicon_16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/img/favicon/favicon_32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon/favicon_96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+    <meta name="msapplication-TileColor" content="#042b48" />
+    <meta name="msapplication-TileImage" content="/img/favicon/tile_144.png" />
+    <meta name="msapplication-square70x70logo" content="/img/favicon/tile_small.png" />
+    <meta name="msapplication-square150x150logo" content="/img/favicon/tile_medium.png" />
+    <meta name="msapplication-square310x310logo" content="/img/favicon/tile_large.png" />
+    <meta name="google" content="notranslate" />
+
+    <meta property="og:title" content="DeepL Traduction – DeepL Translate : le meilleur traducteur au monde" />
+    <meta property="og:description"
+        content="Traduisez des textes et des documents complets en un instant. Des traductions précises accessibles aux utilisateurs uniques et aux équipes. Des millions de personnes utilisent DeepL chaque jour." />
+    <meta property="og:image" content="https://www.DeepL.com/img/favicon/deepl_logo_600_300.png" />
+    <meta property="og:url" content="https://www.DeepL.com/translator" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-itunes-app"
+        content="app-id=1552407475,affiliate-data=pt=309298&ct=Smart%20App%20Banner%20iOS%20Safari&mt=8" />
+    <script>
+        if (typeof window.__REACT_DEVTOOLS_GLOBAL_HOOK__ === 'object') {
+            __REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function () { };
+        }
+    </script>
+    <script>
+
+        (function () {
+            var ep;
+            var loginState;
+            try {
+                window.localStorage && (ep = JSON.parse(window.localStorage.getItem('dl_ep') || "false"));
+                window.localStorage && (loginState = JSON.parse(window.localStorage.getItem('dl_loginState')) || undefined);
+            } catch (e) {
+                console.error(e);
+            }
+
+
+            // read release groups cookie
+            var releaseGroups = [];
+            try {
+                if (document.cookie) {
+                    var allCookies = document.cookie.split('; ');
+                    var releaseGroupsCookie = '';
+
+                    for (i = 0; i < allCookies.length; i++) {
+                        var cookiePair = allCookies[i].split('=');
+                        if ('releaseGroups' === cookiePair[0].trim()) {
+                            releaseGroupsCookie = cookiePair[1];
+                        }
+                    }
+
+                    if (releaseGroupsCookie) {
+                        // structure: id.name.variant.breakout_id.name.variant.breakout ...
+                        var groups = releaseGroupsCookie.split('_');
+
+                        for (i = 0; i < groups.length; i++) {
+                            var group = groups[i].split('.');
+
+                            if (group.length === 4) {
+                                releaseGroups.push({
+                                    id: parseInt(group[0], 10) || 0,
+                                    name: group[1],
+                                    variant: parseInt(group[2], 10) || 0,
+                                    breakout: parseInt(group[3], 10) || 0
+                                });
+                            }
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error(e);
+            }
+
+            // read recommendation cookie
+            var userRecommendations = [];
+            try {
+                if (document.cookie) {
+                    var allCookies = document.cookie.split('; ');
+                    var userRecommendationsCookie = '';
+
+                    for (i = 0; i < allCookies.length; i++) {
+                        var cookiePair = allCookies[i].split('=');
+                        if ('userRecommendations' === cookiePair[0].trim()) {
+                            userRecommendationsCookie = cookiePair[1];
+                        }
+                    }
+
+                    if (userRecommendationsCookie) {
+                        // structure: name.variant_name.variant ...
+                        var recommendations = userRecommendationsCookie.split('_');
+
+                        for (i = 0; i < recommendations.length; i++) {
+                            var recommendation = recommendations[i].split('.');
+
+                            if (recommendation.length === 2) {
+                                userRecommendations.push({
+                                    name: recommendation[0],
+                                    variant: parseInt(recommendation[1], 10) || 0
+                                });
+                            }
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error(e);
+            }
+
+            window.dl_pageState = {
+                v: '20180814',
+                il: 'fr',
+                dataUseProhibited: !!(document.cookie || "").match(/(^| )data-use-prohibited=[^;]+/)
+                ,
+                logoutTarget: '/translator',
+                relCanonical: '/translator',
+                dapPageId: '110',
+                dapEndpointV2: 'https://s.deepl.com/web/statistics',
+                dapReleaseGroups: 'https://s.deepl.com/web/release-groups',
+                supportUrl: 'https://support.deepl.com',
+                secureCookie: '1',
+                featureFlags: ['app_docTrans_uploadBtn_2020_07_mac', 'app_docTrans_uploadBtn_2020_07_win', 'banner_ad_202008', 'canadaUSProRelease_2020_04', 'charCount_apps_ad', 'docTrans_backend_v2', 'docTrans_free_limit_2021_01', 'freeApi_2021_02', 'langDetection_2020_09', 'ltSEO_2020_10', 'nativeLangSelect_2020_08', 'newBlogPage', 'newProAccount', 'notifications_react_2020_10', 'pro_brands_2020_08', 'pro_footer_2020_08', 'sso', 'support_zendesk_guide_2021_03', 'translatorTrackingApp_2020-08', 'translatorTracking_2020-07', 'upgradeFlows_2020_09', 'newEULangsProDocTrans_2020_12', 'sentry', 'newInterfaceLang_SV_2021_06',]
+            };
+
+            if (loginState && loginState.accountId) {
+                dl_pageState.loginState = loginState;
+                document.documentElement.classList.add('dl_user_logged_in');
+            } else if (ep) {
+                dl_pageState.ep = ep
+                document.documentElement.classList.add('dl_ep');
+            }
+            if (ep || (loginState && loginState.accountId)) {
+                dl_pageState.pro = true;
+                document.documentElement.classList.add('dl_pro');
+            }
+
+            dl_pageState.releaseGroups = releaseGroups;
+            dl_pageState.userRecommendations = userRecommendations;
+            window.dl_documentReady || (window.dl_documentReady = function (f) {
+                (window.dl_documentReady._callbacks || (window.dl_documentReady._callbacks = [])).push(f);
+            });
+            window.dl_texts = { "pro-home\/subscribeNowButton": "S'abonner sans essai gratuit", "pro-home\/freeTrialButton": "P\u00e9riode d'essai gratuite", "messages\/fieldError.passwordTooShort": "Le mot de passe doit contenir au moins huit caract\u00e8res.", "messages\/error.maintenanceWork": "Nous faisons notre possible pour r\u00e9soudre vos probl\u00e8mes techniques. Veuillez r\u00e9essayer dans un court instant.", "messages\/error.cardReauthorizationFailed.classic": "L'autorisation de votre carte n'a malheureusement pas pu \u00eatre renouvel\u00e9e. Veuillez mettre \u00e0 jour votre moyen de paiement.", "cookieBanner\/introductoryText": "Les cookies nous permettent de vous offrir des fonctionnalit\u00e9s utiles et de mesurer les performances afin d'am\u00e9liorer votre exp\u00e9rience. En cliquant sur \u00ab&nbsp;Accepter tout&nbsp;\u00bb, vous acceptez l'utilisation de tous les cookies. En cliquant sur \u00ab&nbsp;Accepter la s\u00e9lection&nbsp;\u00bb, vous acceptez uniquement l'utilisation des cat\u00e9gories de cookies s\u00e9lectionn\u00e9es. Pour en savoir plus, consultez notre <a href=\"\/privacy\">politique de confidentialit\u00e9<\/a>.", "cookieBanner\/category_necessary": "Fonctionnement", "cookieBanner\/category_performance": "Performance", "cookieBanner\/category_comfort": "Confort", "cookieBanner\/explanations_moreInfo": "En savoir plus", "cookieBanner\/explanations_lessInfo": "R\u00e9duire", "cookieBanner\/explanations_necessary": "Ces cookies sont n\u00e9cessaires au bon fonctionnement de notre site internet, ils vous permettent d'en utiliser les fonctionnalit\u00e9s les plus importantes et de naviguer en toute tranquillit\u00e9. Il s'agit notamment des fonctions essentielles de s\u00e9curit\u00e9 et d'accessibilit\u00e9, ainsi que des pr\u00e9f\u00e9rences que vous choisissez, comme la langue choisie pour l'interface et le traducteur.", "cookieBanner\/explanations_performance": "Ces cookies nous renseignent sur l'utilisation du site. Ils nous aident \u00e0 am\u00e9liorer nos services ainsi que le site en lui-m\u00eame. Avec ces cookies, nous mesurons, par exemple, la fr\u00e9quence de visite des utilisateurs et les fonctions qu'ils utilisent.", "cookieBanner\/explanations_comfort": "Ces cookies permettent au site web d'offrir des fonctionnalit\u00e9s et une personnalisation accrues, en m\u00e9morisant par exemple les pages que vous avez visit\u00e9es et en adaptant votre exp\u00e9rience en fonction de ces donn\u00e9es.", "cookieBanner\/cta_acceptAll": "Accepter tout", "cookieBanner\/cta_acceptSelected": "Accepter la s\u00e9lection", "footer.cookieBanner.text": "DeepL utilise des cookies. Pour plus de d\u00e9tails, consultez notre <a href=\"\/privacy\">politique de confidentialit\u00e9<\/a>.", "buttonClose": "Fermer", "menuBar.translatorLink": "Traducteur", "menuBar.lingueeLink": "Linguee", "menuBar.proHomeLink": "DeepL Pro", "menuBar.proApiLink": "API", "menuBar.featuresLink": "Services", "menuEntry.pro_PlansAndPricing": "Forfaits et tarifs", "menuEntry.pro_pricing": "Tarifs", "menuEntry.desktopApps": "Applis Windows \/ MacOS", "menuEntry.iosApp": "Application iOS", "menuEntry.pro_apiDocs": "API \u2013 Documents techniques", "menuEntry.pro_faq": "FAQ", "menuEntry.support": "Centre d'assistance", "menuBar.blogLink": "Blog", "menuEntry.pressInformation": "Informations presse", "menuEntry.jobOfferings": "Offres d'emploi", "menuEntry.write": "DeepL Writer (tech demo)", "menuBar.loginMenu": "Connexion", "loginMenu.signupShort": "Nouvel abonnement", "userMenu.myAccount": "Compte", "userMenu.logout": "D\u00e9connexion", "loginMenu.noAccountYet": "Pas encore de compte ?", "loginMenu.signupLong": "S'abonner \u00e0 DeepL Pro", "loginMenu.headline": "Connexion", "loginMenu.login": "E-Mail", "loginMenu.password": "Mot de passe", "loginMenu.passwordLostButton": "Mot de passe oubli\u00e9 ?", "loginMenu.submitButton": "Connexion", "loginMenu.loginKeep": "Se souvenir de moi", "sendPasswordLinkLogin": "Retour \u00e0 l'\u00e9cran de connexion", "sendPasswordLinkTitle": "R\u00e9initialiser le mot de passe", "sendPasswordLinkSubmit": "R\u00e9initialiser le mot de passe", "sendPasswordLinkSuccess": "Nous vous avons envoy\u00e9 des consignes pour r\u00e9initialiser votre mot de passe (\u00e0 condition qu'un compte soit associ\u00e9 \u00e0 cette adresse e-mail).", "messages\/fieldError.login_emailRequired": "E-mail requis.", "messages\/fieldError.login_passwordRequired": "Mot de passe requis.", "messages\/fieldError.emailInvalid": "L'adresse e-mail est invalide.", "messages\/error.loginFailed": "La connexion a \u00e9chou\u00e9.", "customer-messages\/AUTHENTICATION_REQUIRED.message": "Un paiement relatif \u00e0 votre compte DeepL Pro n'a pas pu \u00eatre effectu\u00e9 car l'autorisation de votre moyen de paiement a expir\u00e9. Veuillez autoriser le paiement ou mettre \u00e0 jour vos coordonn\u00e9es de paiement.", "customer-messages\/AUTHENTICATION_REQUIRED.link": "Mettre \u00e0 jour les coordonn\u00e9es de paiement", "customer-messages\/AUTHENTICATION_REQUIRED.button": "Renouveler l'autorisation", "customer-messages\/CARD_ERROR.message": "Le paiement relatif \u00e0 votre abonnement DeepL Pro n'a pas pu \u00eatre effectu\u00e9. Veuillez contacter votre banque ou fournir un autre moyen de paiement.", "customer-messages\/CARD_ERROR.link": "Changer de moyen de paiement", "customer-messages\/CHECK_CARD.message": "Un paiement relatif \u00e0 votre compte DeepL Pro n'a pas pu \u00eatre effectu\u00e9. Veuillez v\u00e9rifier vos coordonn\u00e9es de paiement ou contacter votre institution bancaire pour en savoir plus.", "customer-messages\/CHECK_CARD.link": "V\u00e9rifier les coordonn\u00e9es de paiement", "customer-messages\/VAT_NUMBER_INVALIDATED.message": "Votre num\u00e9ro de TVA n'a pas pu \u00eatre valid\u00e9. Si vous avez re\u00e7u un nouveau num\u00e9ro, veuillez mettre \u00e0 jour vos coordonn\u00e9es de paiement.", "customer-messages\/VAT_NUMBER_INVALIDATED.link": "Mettre \u00e0 jour les coordonn\u00e9es de paiement", "messages\/error.loginFailedWithTooManyRequests": "\u00c9chec de la connexion en raison d'un trop grand nombre de tentatives.", "loginMenu.ssoButton": "Authentification unique (SSO)", "loginMenu.ssoSubdomainLabel": "Domaine d'authentification unique de l'entreprise", "loginMenu.ssoSubdomainError": "Ce domaine n'a pas de dispositif d'authentification unique. Veuillez contacter l'administrateur de votre compte.", "loginMenu.ssoBackToNormalLogin": "Pr\u00e9c\u00e9dent", "loginMenu.ssoSubdomainPlaceholder": "votre-domaine", "loginMenu.ssoDeepldomainPlaceholder": ".sso.deepl.com", "messages\/error.loggedOut": "Vous \u00eates d\u00e9connect\u00e9.", "messages\/error.ssoAuthorizationFailed": "Le processus d'authentification unique a \u00e9chou\u00e9. Veuillez contacter l'assistance technique de&nbsp;DeepL.", "messages\/error.ssoError.SSO20": "Ce domaine n'a pas de dispositif d'authentification unique. Veuillez contacter votre administrateur de comptes.", "messages\/error.ssoError.SSO21": "Les abonnements correspondant \u00e0 cette adresse sont trop nombreux. Veuillez contacter votre administrateur de comptes.", "messages\/error.ssoError.SSO22": "Impossible d'inscrire un compte suppl\u00e9mentaire. Veuillez contacter votre administrateur de comptes.", "messages\/error.ssoError.SSO23": "Impossible d'ajouter votre compte. Veuillez contacter votre administrateur de comptes.", "messages\/error.ssoError.SSO99": "Une erreur s'est produite. Veuillez r\u00e9essayer ult\u00e9rieurement.", "messages\/sso_migration_needed_headline": "Connexion SSO d\u00e9sormais n\u00e9cessaire", "messages\/sso_migration_needed_text": "Pour des raisons de s\u00e9curit\u00e9, tous les utilisateurs de votre compte d'\u00e9quipe doivent d\u00e9sormais utiliser un processus de connexion par authentification unique (SSO). <br \/><br \/>Pour de plus amples renseignements, veuillez nous contacter \u00e0 l'adresse <a href=\"mailto:${email}\">${email}<\/a>.", "messages\/sso_migration_needed_link": "Connexion SSO" };
+
+            // M bootstrap
+            window.M = {}
+            M.__delayedCommands = []
+            M.define = function () {
+                var args = arguments
+                M.__delayedCommands.push(function () {
+                    window.M.define.apply(null, args)
+                })
+            }
+            M.requireAsync = function () {
+                var args = arguments
+                M.__delayedCommands.push(function () {
+                    window.M.requireAsync.apply(null, args)
+                })
+            }
+            M.registerAsync = function (key, value) {
+                M.__delayedCommands.push(function () {
+                    window.M.registerAsync(key, value)
+                })
+            }
+        })();
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="https://static.deepl.com/css/deepl.$b37c22.css" />
+    <link rel="stylesheet" type="text/css" href="https://static.deepl.com/css/deepl-ui.$aec6ad.css" />
+    <script>
+        (function () {
+            const loc = ((decodeURIComponent("" + location.pathname).match(/^.*?\/translator.*?\/(.*)($|\?)|/) || [])[1] || "");
+            const parts = loc.split("/");
+            if (parts.length < 3)
+                return;
+            let updateMetaNodes = false, mode = parts[0];
+            if (mode === 'l' || mode === 'q') { parts.shift(); } else { mode = 'q'; }
+            let initialState, newPageId;
+            const a = parts.map(function (s) { return s.replace(/\+/g, " ") }), revert = [];
+            if (mode === 'q') {
+                const s = parts.join("/");
+                let v = 0x811c9dc5;
+                for (let i = s.length - 1; i >= 0; --i) { v ^= s.charCodeAt(i); v += (v << 1) + (v << 4) + (v << 7) + (v << 8) + (v << 24); }
+                const checked = (v >>> 0).toString(16).match(/73536$/);
+                revert.push(function () { window.history.replaceState(null, "", (location.href.match(/^.*?translator/g) || [])[0]); });
+                initialState = { sourceLangcode: a[0], sourceText: a[1], targetLangcode: a[2], revert: revert, };
+                if (checked) {
+                    initialState.checked = true;
+                    initialState.sourceChains = [[a[1]]];
+                    initialState.targetChains = [[a[3]]];
+                    updateMetaNodes = true;
+                    const originalTitle = document.title;
+                    document.title = a[1] + " (" + a[0] + ") - " + originalTitle;
+                    revert.push(function () { document.title = originalTitle });
+                    newPageId = 1200;
+                }
+            } else if (mode === 'l') {
+                initialState = { sourceLangcode: a[0], targetLangcode: a[1], revert: revert, checked: true };
+                updateMetaNodes = true;
+                const originalTitle = document.title;
+                document.title = originalTitle + " - (" + a[0] + ")";
+                revert.push(function () { document.title = originalTitle });
+                newPageId = 1201;
+            }
+            if (updateMetaNodes) {
+                const linkNodes = document.querySelectorAll("link[rel=alternate], link[rel=canonical]");
+                for (let i = 0; i < linkNodes.length; ++i) {
+                    const n = linkNodes[i], originalHref = n.getAttribute('href') || "";
+                    n.setAttribute('href', originalHref.replace('translator', 'translator/' + loc));
+                    revert.push(function () { n.setAttribute('href', originalHref) });
+                }
+                const metaNodes = document.querySelectorAll("meta[property^=og]");
+                for (let i = 0; i < metaNodes.length; ++i) {
+                    const n = metaNodes[i];
+                    n.parentElement.removeChild(n);
+                }
+            }
+            if (newPageId && window.dl_pageState) {
+                const originalDapPageId = window.dl_pageState.dapPageId;
+                window.dl_pageState.dapPageId = newPageId;
+                revert.push(function () { window.dl_pageState.dapPageId = originalDapPageId });
+            }
+
+            window._initialTranslatorState = initialState;
+        })();
+        (function () {
+            if (location.hash) {
+                const n = document.createElement("meta");
+                n.setAttribute("name", "robots");
+                n.setAttribute("content", "noindex");
+                document.querySelector("head").appendChild(n);
+            }
+        })()
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://static.deepl.com/css/lmt.$fa50e0.css" />
+    <script src='https://static.deepl.com/js/translator_early.min.$b251a1.js'></script>
+    <script>
+            (function () {
+                var isActive = dl_pageState.releaseGroups.some(function (r) {
+                    return r.name === 'DF-1006' && r.variant === 2
+                })
+                var isMobilePhone = window.matchMedia &&
+                    (
+                        window.matchMedia("screen and (max-device-width: 650px)").matches ||
+                        window.matchMedia("screen and (max-device-height: 650px) and (hover:none)").matches
+                    )
+
+                if (isActive && isMobilePhone) {
+                    document.documentElement.className += ' mobile_restyling_df1006'
+                }
+            })()
+    </script>
+    <script>
+            (function () {
+                var isActive = dl_pageState.releaseGroups.some(function (r) {
+                    return r.name === 'DF-1968' && r.variant === 2
+                })
+
+                if (isActive) {
+                    document.documentElement.classList.add('desktop_restyling_df1968')
+                }
+            })()
+    </script>
+    <script>
+            (function () {
+                var isActive = dl_pageState.releaseGroups.some(function (r) {
+                    return r.name === 'DF-1970' && r.variant === 2
+                })
+
+                if (isActive) {
+                    document.documentElement.classList.add('desktop_restyling_df1970')
+                }
+            })()
+    </script>
+</head>
+
+<body class="dl_body dl_body--translator dl_body--redesign ">
+
+    <!-- ============================== TopNav ============================== -->
+
+    <header class='dl_header' dl-test="dl-header">
+        <nav class='dl_header_menu_v2 dl_top_element--wide'>
+            <a class='dl_header_menu_v2__logo' id="dl_menu_logo" href='#' tabindex="10">
+                <img class="dl_header_menu_v2__logo__img" dl-test="dl_header_menu_v2__logo__img"
+                    src="https://static.deepl.com/img/logo/DeepL_Logo_darkBlue_v2.svg" alt="DeepL logo">
+            </a>
+            <div class="dl_header_menu_v2__items">
+                <div class="dl_header_menu_v2__links dl--margin_left" id="dl_navbar_desktop">
+                    <a class="dl_header_menu_v2__links__item dl_translator_link" id="dl_menu_translator_simplified"
+                        href="#" tabindex="10">
+                        <div>
+                            <img class="dl_logo_text" src="https://static.deepl.com/img/logo/DeepL_Text_darkBlue.svg"
+                                alt="DeepL logo">
+                            <span>Traducteur</span>
+                        </div>
+                    </a>
+                    <a class="dl_header_menu_v2__links__item" id="dl_menu_deepl_pro" href="#" tabindex="10"
+                        style="display: none;">
+                        DeepL Pro </a>
+                    <a class="dl_header_menu_v2__links__item" id="dl_menu_deepl_features" href="#" tabindex="10"
+                        style="display: none;">
+                        Services </a>
+                    <a class="dl_header_menu_v2__links__item" id="dl_menu_deepl_api" href="#" tabindex="10"
+                        style="display: none;">
+                        API </a>
+                    <a class="dl_header_menu_v2__links__item" id="dl_menu_plans_and_pricing" href="" tabindex="10">
+                        <span id="dm-83-variant-1-text" style="display: none;">Forfaits et tarifs</span>
+                        <span id="dm-83-variant-2-text" style="display: none;">Tarifs</span>
+                    </a>
+                    <a class="dl_header_menu_v2__links__item" id="dl_menu_apps" href="#" tabindex="10">
+                        <span class="dl_headerMenu__itemWithBadge">
+                            Applications <span id="apps-link-free-badge-DM-238" style="display: none"
+                                class="dl_headerMenu__freeBadge">gratuit</span>
+                        </span>
+                    </a>
+                    <a class="rg-badge-container-DM-238"></a>
+                </div>
+                <div class="dl_header_menu_v2__links--mobile dl_dropdown">
+                    <!-- mobile header has no direct links -->
+                </div>
+                <div class="dl_header_menu_v2__buttons">
+                    <div class="dl_header_menu_v2__login_button">
+                        <button dl-attr='onClick: dlHeaderMenu.doOpenLoginMenu' class="dl_header_menu_v2__buttons__item"
+                            tabindex="10" dl-test="menu-account-out-btn">
+                            Connexion </button>
+                    </div>
+                    <div class="dl_header_menu_v2__user_menu"
+                        dl-attr='onAnyclick{false}: $$.userMenuIsOpen, classIf{dl_header_menu_v2__user_menu--is_open}: $$.userMenuIsOpen'>
+                        <button class="dl_header_menu_v2__buttons__item" dl-attr="onClick{__TOGGLE}: $$.userMenuIsOpen"
+                            dl-test="menu-account-in-btn" tabindex="10">
+                            <span dl-attr="text: userMenu.userDisplayName"> </span>
+                            <div>
+                                <!-- opener -->
+                            </div>
+                        </button>
+                        <div class="dl_header_menu_v2__user_menu__dropdown">
+                            <a href='/pro-account.html' tabindex="10" dl-test="menu-account-link"
+                                autofocus="autofocus">Compte</a>
+
+
+                            <button onclick="M.requireAsync(['kDeepL'],function(kDeepL){kDeepL.logout();})"
+                                tabindex="10" dl-test="menu-account-logout">
+                                Déconnexion </button>
+                        </div>
+                    </div>
+                    <div id="notifications-container"></div>
+                    <div class='dl_header_menu_v2__buttons__menu'>
+                        <button class="dl_header_menu_v2__buttons__item" dl-attr='onClick: dlHeaderMenu.doOpenNavMenu'
+                            dl-test="menu-site-btn" title="Menu" tabindex="10">
+                            Menu </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <a class="rg-badge-container-DM-29"></a>
+    <a class="rg-badge-container-DM-83"></a>
+    <a class="rg-badge-container-DM-115"></a>
+    <div dl-attr='content: dlHeaderMenu.content'></div>
+
+
+    <!-- =============================== -->
+
+    <template dl-template='dl_headerMenu__appButton_windows'>
+        <a tabindex='10' dl-attr="onClick: $0.onDownload, attr{href}:$0.downloadURL"
+            class='dl_headerMenu__appButton'><span>Télécharger DeepL pour Windows</span><span>C'est gratuit !</span></a>
+    </template>
+
+    <template dl-template='dl_headerMenu__appButton_mac'>
+        <a tabindex='10' dl-attr="onClick: $0.onDownload, attr{href}:$0.downloadURL"
+            class='dl_headerMenu__appButton'><span>Télécharger DeepL pour Mac</span><span>C'est gratuit !</span></a>
+    </template>
+
+    <template dl-template='dl_headerMenu__proButton'>
+        <a tabindex='10' dl-attr="attr{href}:$0.proUrl" , class='dl_headerMenu__proButton'><span>Commencer l'essai
+                gratuit</span></a>
+    </template>
+
+    <!-- =============================== -->
+
+    <script>
+        var dl_dropdown = {
+            toggle: function (toggler, e) {
+                if (!e) e = window.event;
+                e.preventDefault();
+                toggler.parentNode.classList.toggle('dl--is_open');
+            }
+        }
+    </script>
+
+
+    <!-- ============================== Translator ============================== -->
+
+    <div class='dl_translator_page_container'>
+
+        <script>
+            window.dl_texts || (window.dl_texts = new Object(null));
+            Object.assign(window.dl_texts, { "genericDialog.continueButton": "Continuer", "messages\/outdatedSite.text": "Une nouvelle version de cette page est accessible. Veuillez actualiser la page.", "messages\/outdatedSite.reloadButton": "Actualiser", "messages\/enterpriseAccount.loggingOutMessage": "D\u00e9connexion du compte d'entreprise DeepL Pro...", "messages\/enterpriseAccount.loggingInMessage": "Connexion au compte d'entreprise DeepL Pro...", "messages\/enterpriseAccount.infoHeadline": "Compte d'entreprise DeepL Pro", "translator\/characterLimit_proAd.targetText_more_specific": "Caract\u00e8res traduits&nbsp;: <strong class=\"lmt__target_textarea_proAd_highlight\">seulement {{{charLimit}}}\/{{{charCount}}}<\/strong>. <a id=\"lmt__target_textarea_proAd_link\" class=\"lmt__target_textarea_proAd_link\">Abonnez-vous<\/a> \u00e0 DeepL&nbsp;Pro pour traduire du texte en illimit\u00e9.", "translator\/detectLanguage": "<span class=\"translate_from\">Texte original en&nbsp;: <\/span><strong><span><\/span>langue d\u00e9tect\u00e9e automatiquement<\/strong>", "translator\/close": "Fermer", "translator\/translateFrom": "<span class=\"translate_from\">Texte original en&nbsp;: <\/span>", "translator\/translateFrom.selection.mobile": "Texte original en\u00a0:", "translator\/translateFrom.selectSourceLanguage": "S\u00e9lectionnez la langue source", "translator\/translateTo": "<span class=\"translate_to\">Traduction en&nbsp;: <\/span><strong>allemand<\/strong>", "translator\/translateTo_short": "<span class=\"translate_to\">Traduction en&nbsp;: <\/span><strong>allemand<\/strong>", "translator\/translateTo.selection.mobile": "Traduction en\u00a0:", "translator\/translateTo.selectTranslationLanguage": "S\u00e9lectionnez la langue cible", "translator\/translationLanguageDetected": "(langue d\u00e9tect\u00e9e)", "translator\/alternativeTranslations": "Autres traductions&nbsp;: ", "translator\/alternativeTranslationsTooltip": "Cliquez sur un mot pour voir les autres traductions possibles", "translator\/alternativeTranslationsReset": "Traduction initiale", "translator\/smartTargetEditing_preview": "Aper\u00e7u", "translator\/smartTargetEditing_show_preview": "Afficher l'aper\u00e7u", "translator\/smartTargetEditing_hide_preview": "Masquer l'aper\u00e7u", "translator\/smartTargetEditing_hover": "Passez le curseur sur l'une des suggestions pour voir les changements qu'elle apporterait \u00e0 la traduction.", "translator\/notification_overload": "Le service est actuellement limit\u00e9 en raison d'un traffic \u00e9lev\u00e9 sur DeepL Traducteur. Veuillez r\u00e9essayer plus tard.", "translator\/notification_networkProblems": "Il semble y avoir un probl\u00e8me avec la connexion Internet. Le fonctionnement de DeepL pourrait \u00eatre limit\u00e9.", "translator\/notification_onlyOneSentence": "En raison du trafic \u00e9lev\u00e9 sur notre site, le service est pour le moment limit\u00e9. Vous pouvez uniquement traduire une phrase \u00e0 la fois. Les fonctions d'\u00e9dition avanc\u00e9es ne sont pas disponibles.", "translator\/notification_noAdvancedEditing": "En raison du trafic \u00e9lev\u00e9 sur notre site, le service est pour le moment limit\u00e9 et les fonctions d'\u00e9dition avanc\u00e9es sont indisponibles.", "translator\/notification_user_blocked": "En raison de requ\u00eates trop nombreuses venant de votre navigateur, l'acc\u00e8s \u00e0 la version gratuite de DeepL Traducteur a \u00e9t\u00e9 temporairement d\u00e9sactiv\u00e9. R\u00e9essayez dans quelques instants, abonnez-vous \u00e0 DeepL Pro ou contactez-nous \u00e0 l'adresse block@DeepL.com en indiquant votre adresse IP.", "translator\/recommendation.free_trial": "Reprenez votre <b>essai gratuit de 30&nbsp;jours<\/b> sur DeepL Pro l\u00e0 o\u00f9 vous l'aviez laiss\u00e9.", "translator\/messageBox_clickHint": "Cliquez sur un mot pour obtenir d'autres suggestions.", "translator\/messageBox_completionHint": "S\u00e9lectionnez un mot et DeepL Traducteur compl\u00e9tera votre phrase.", "translator\/proAccountError.accountProblem": "Vos d\u00e9tails d'abonnement n'ont pas pu \u00eatre valid\u00e9s. Veuillez v\u00e9rifier le statut de votre abonnement et r\u00e9essayer.", "translator\/proAccountError.quotaReached": "Vous avez atteint votre limite de traduction.", "translator\/proAccountError.accountPageButton": "V\u00e9rifier le statut de votre abonnement", "translator\/proAccountError.noSubscription": "<p>Vous \u00eates connect\u00e9 en tant qu'utilisateur de DeepL Pro. Nous n'avons toutefois pas trouv\u00e9 d'abonnement actif ou d'abonnement d'\u00e9quipe associ\u00e9 \u00e0 votre compte.<\/p><p>Vous ne pouvez donc pas utiliser DeepL Traducteur en \u00e9tant connect\u00e9.<\/p>", "translator\/proAccountError.logoutAndUseFreeButton": "Se d\u00e9connecter pour utiliser DeepL Traducteur (gratuit)", "translator\/proAccountError.refreshPageButton": "Actualiser", "translator\/proAccountError.noAccess": "Votre forfait actuel n'inclut pas l'utilisation de DeepL Traducteur sur notre site.", "translator\/proAccountError.noAccess_accountPageButton": "Ouvrir mon compte DeepL Pro", "translator\/proAccountError.noAccess_logoutButton": "Utiliser la version gratuite de DeepL", "translator\/translation_feedback": "\u00c9valuer cette traduction", "translator\/copyText.tooltip": "Copier dans le presse-papiers", "translator\/copyText.feedback": "Traduction copi\u00e9e", "translator\/toolbar.listen": "\u00c9couter", "translator\/toolbar.waitForRequestsFeedback": "Veuillez attendre la fin des requ\u00eates", "translator\/share.tooltip": "Partager cette traduction", "translator\/shareMenu.headline": "Partager", "translator\/shareMenu.copyUrlButton": "Copier l'URL", "translator\/shareMenu.textShortendHint": "Note&nbsp;: votre texte est trop long pour \u00eatre partag\u00e9 en entier. Seule la premi\u00e8re phrase sera partag\u00e9e.", "translator\/shareMenu.urlToShare": "URL \u00e0 partager", "translator\/share.mailBody": "Traduit avec www.DeepL.com\/translator (version gratuite)", "translator\/share.mailSubject": "Traduction avec DeepL Traducteur", "translator\/share.title": "Traduit avec www.DeepL.com\/translator (version gratuite)", "translator\/share.editedTranslationHint": "La traduction a \u00e9t\u00e9 \u00e9dit\u00e9e.", "translator\/share.editedTranslation_revertButton": "Revenir \u00e0 la version originale", "translator\/share.editedTranslation_acceptButton": "Accepter les changements", "translator\/selectEnglish": "anglais", "translator\/selectGerman": "allemand", "translator\/selectFrench": "fran\u00e7ais", "translator\/selectSpanish": "espagnol", "translator\/selectItalian": "italien", "translator\/selectDutch": "n\u00e9erlandais", "translator\/selectPolish": "polonais", "translator\/selectRussian": "russe", "translator\/selectPortuguese": "portugais", "translator\/selectLang.source.ja": "japonais", "translator\/selectLang.source.zh": "chinois", "translator\/selectLang.target.en": "anglais", "translator\/selectLang.target.en.en-US": "anglais (am\u00e9ricain)", "translator\/selectLang.target.en.en-GB": "anglais (britannique)", "translator\/selectLang.target.de": "allemand", "translator\/selectLang.target.fr": "fran\u00e7ais", "translator\/selectLang.target.es": "espagnol", "translator\/selectLang.target.it": "italien", "translator\/selectLang.target.nl": "n\u00e9erlandais", "translator\/selectLang.target.pl": "polonais", "translator\/selectLang.target.ru": "russe", "translator\/selectLang.target.pt": "portugais", "translator\/selectLang.target.pt.pt-PT": "portugais", "translator\/selectLang.target.pt.pt-BR": "portugais (br\u00e9silien)", "translator\/selectLang.target.ja": "japonais", "translator\/selectLang.target.zh": "chinois (simplifi\u00e9)", "translator\/shortLang.target.en": "anglais", "translator\/shortLang.target.en.en-US": "anglais (USA)", "translator\/shortLang.target.en.en-GB": "anglais (GB)", "translator\/shortLang.target.de": "allemand", "translator\/shortLang.target.fr": "fran\u00e7ais", "translator\/shortLang.target.es": "espagnol", "translator\/shortLang.target.it": "italien", "translator\/shortLang.target.nl": "n\u00e9erlandais", "translator\/shortLang.target.pl": "polonais", "translator\/shortLang.target.ru": "russe", "translator\/shortLang.target.pt": "portugais", "translator\/shortLang.target.pt.pt-PT": "portugais", "translator\/shortLang.target.pt.pt-BR": "portugais (BR)", "translator\/shortLang.target.ja": "japonais", "translator\/shortLang.target.zh": "chinois", "translator\/switchLang.tooltip": "Permuter les langues", "messages\/appWorkflow.appDelayProLink": "Obtenez des traductions plus rapidement avec <a href=\"https:\/\/www.deepl.com\/pro.html?utm_source=win_app&utm_medium=banner&utm_campaign=perf_banner\">DeepL Pro &rarr;<\/a>", "messages\/fieldError.requiredField": "Veuillez compl\u00e9ter cette information.", "translator\/ad.apps.toolbar.macos": "Travaillez en acc\u00e9l\u00e9r\u00e9 avec DeepL pour Mac.", "translator\/ad.apps.toolbar.windows": "Travaillez en acc\u00e9l\u00e9r\u00e9 avec DeepL pour Windows.", "translator\/ad.apps.toolbar.download": "<a href=\"\/app\" target=\"_blank\">T\u00e9l\u00e9chargez l'application gratuitement&nbsp;<\/a>!", "translator\/ad.apps.bullet.1.macos": "Traduisez du texte dans n'importe quelle application en appuyant simplement deux fois sur \u2318+C", "translator\/ad.apps.bullet.1.windows": "Traduisez du texte dans n'importe quelle application en appuyant simplement deux fois sur Ctrl+C", "translator\/ad.apps.compact.title.macos": "<strong>Traduisez encore plus vite avec DeepL pour Mac<\/strong>", "translator\/ad.apps.compact.title.windows": "<strong>Traduisez encore plus vite avec DeepL pour Windows<\/strong>", "translator\/anyLanguageWithoutDetect": "D\u00e9tection automatique", "translator\/selectLang.newLanguages": "Nouvelles langues", "translator\/selectLang.allLanguages": "Toutes les langues", "translator\/selectLang.recentlyUsed": "Langues r\u00e9cemment utilis\u00e9es", "translator\/placeholderText.web.mobile": "\u00c9crivez ou collez votre texte ici", "translator\/placeholderText.web.mobile.bottom.variant": "<span><strong>Des millions de personnes utilisent DeepL tous les jours.<\/strong> Combinaisons populaires : anglais-fran\u00e7ais, espagnol-fran\u00e7ais, allemand-fran\u00e7ais.<\/span><span>Autres langues : bulgare, chinois, danois, estonien, finnois, grec, hongrois, italien, japonais, letton, lituanien, n\u00e9erlandais, polonais, portugais, roumain, russe, slovaque, slov\u00e8ne, su\u00e9dois, tch\u00e8que.<\/span>", "translator\/placeholderText.web.withDocument.shortVariant": "<div>\u00c9crivez ou collez votre texte ici.<\/div><div>Pour traduire des fichiers Word (.docx) ou Powerpoint (.pptx), d\u00e9posez-les directement dans notre interface de traduction de documents.<\/div>", "translator\/tooltip.newLanguages.text": "DeepL parle aussi ${newLanguageName}&nbsp;!", "translator\/tooltip.newLanguages.cta1": "OK", "translator\/tooltip.newLanguages.cta2": "Essayer", "translator\/saveTranslation.ad.header": "Enregistrez vos traductions", "translator\/saveTranslation.ad.body": "<b>DeepL Pro<\/b> vous offre la possibilit\u00e9 d'enregistrer vos traductions sur votre appareil pour que vous puissiez les retravailler plus tard.", "translator\/saveTranslation.ad.cta": "Essayer DeepL Pro sans frais pendant 30 jours", "translator\/ad.charLimit.statsTextTail": " caract\u00e8res traduits.", "translator\/ad.charLimit.ctaTextHead": "Abonnez-vous \u00e0 DeepL Pro", "translator\/ad.charLimit.ctaTextTail": "pour traduire plus de 5000 caract\u00e8res.", "translator\/ad.apps.banner.title.macos": "Nouveau : DeepL pour Mac", "translator\/ad.apps.banner.title.windows": "Nouveau : DeepL pour Windows", "translator\/ad.apps.banner.subtitle": "La mani\u00e8re la plus rapide et la plus simple d'utiliser DeepL", "translator\/ad.apps.banner.subtitle_2": "Traduisez sur n'importe quelle application de votre ordinateur", "translator\/ad.apps.banner.download": "T\u00e9l\u00e9charger gratuitement", "translator\/ad.apps.banner.no_thanks": "Non, merci", "translator\/ad.apps.banner.translateFaster": "Traduisez encore plus rapidement gr\u00e2ce aux applications DeepL", "translator\/ad.apps.banner.deeplMacOS": "DeepL pour Mac", "translator\/ad.apps.banner.deeplWindows": "DeepL pour Windows", "translator\/ad.apps.banner.deeplIphoneIpad": "DeepL pour iPhone et\u00a0iPad", "translator\/ad.apps.banner.scanToDownload": "Scannez le code pour t\u00e9l\u00e9charger l'application", "translator\/ad.source.charLimit.text": "<a href=\"\/pro?cta=source-char-limit\">Essayez DeepL\u00a0Pro gratuitement pendant 30\u00a0jours<\/a> et traduisez du texte en illimit\u00e9. Annulez d\u00e8s que vous le souhaitez.", "translator\/ad.source.charLimit.limitInfo": "Vous ne pouvez traduire que\u00a05&nbsp;000 caract\u00e8res.", "pro-home\/slogan": "DeepL Pro \u2014 <strong>Traductions rapides, pr\u00e9cises et s\u00fbres<\/strong>", "pro-home\/component.teaser.security": "Protection maximale des donn\u00e9es", "pro-home\/component.teaser.unlimited_translation": "Traduction de textes en illimit\u00e9", "pro-home\/component.teaser.whole_files": "Traduction de fichiers entiers", "pro-home\/component.teaser.customization": "Personnalisation accrue", "translator\/proAd.banner.learnMore": "En savoir plus", "pro-home\/component.teaser.security_headline": "Garantissez \u00e0 vos donn\u00e9es une protection maximale", "pro-home\/component.teaser.unlimited_translation_headline": "Traduisez autant de textes que vous le souhaitez", "pro-home\/component.teaser.whole_files_headline": "Traduisez et modifiez des fichiers volumineux en toute s\u00e9curit\u00e9", "pro-home\/component.teaser.customization_headline": "Cr\u00e9ez des glossaires sans aucune limite d'entr\u00e9es", "pro-home\/files_security.body": "DeepL&nbsp;Pro vous permet de traduire et de modifier des fichiers volumineux tout en prot\u00e9geant vos donn\u00e9es au maximum.", "pro-home\/files_security.header": "DeepL&nbsp;Pro donne une nouvelle dimension \u00e0 la traduction de documents", "translator\/ad.apps.compact.bullet": "Plus d'un million de personnes travaillent plus efficacement gr\u00e2ce \u00e0 notre application", "translator\/quote_techcrunch_1": "Des g\u00e9ants de la technologie tels que Google, Microsoft et Facebook appliquent les le\u00e7ons de l'apprentissage automatique \u00e0 la traduction, mais une petite entreprise du nom de DeepL les a tous d\u00e9pass\u00e9s et mis la barre plus haut encore. Son outil de traduction est aussi rapide que celui des poids lourds du secteur, mais plus pr\u00e9cis et nuanc\u00e9 que tous ceux que nous avons essay\u00e9s.", "translator\/affiliation_techcrunch_1": "<a href='https:\/\/techcrunch.com\/2017\/08\/29\/deepl-schools-other-online-translators-with-clever-machine-learning\/'>TechCrunch<\/a><br>USA", "translator\/quote_golem": "Bien que les traductions de Google et de Microsoft soient relativement bonnes \u00e0 partir de l'anglais, celles de DeepL Traducteur sont de meilleure qualit\u00e9. Nous avons demand\u00e9 \u00e0 DeepL Traducteur de traduire le compte rendu d'un quotidien fran\u00e7ais, et le r\u00e9sultat est parfait.", "translator\/affiliation_golem": "<a href='https:\/\/www.golem.de\/news\/deepl-im-hands-on-neues-tool-uebersetzt-viel-besser-als-google-und-microsoft-1708-129715.html'>Golem.de<\/a><br>Allemagne", "translator\/quote_mobilegeeks": " Je suis tr\u00e8s impressionn\u00e9 par ce que DeepL Traducteur est capable de faire. C'est g\u00e9nial que cette nouvelle \u00e9tape dans l'\u00e9volution de la traduction automatique ne soit pas le fruit de logiciels de Facebook, Microsoft, Apple ou Google, mais bien celui d'une entreprise allemande. Nous aimons nous faire petits et pr\u00e9tendre que personne dans ce pays n'est capable de concurrencer les poids lourds du net. DeepL montre que cela est tout \u00e0 fait possible.", "translator\/affiliation_mobilegeeks": "<a href='https:\/\/www.mobilegeeks.de\/news\/deepl-ein-besseres-uebersetzungs-tool-als-google-translate\/'>Mobile Geeks<\/a><br>Allemagne", "translator\/quote_wired_de": "Le service allemand DeepL pourrait bien surpasser Google Traduction.<br>\nLe test rapide effectu\u00e9 par WIRED montre que les r\u00e9sultats de DeepL sont en effet tout aussi bons que ceux de ses concurrents de haut rang, voire meilleurs dans de nombreux cas. Les textes traduits par DeepL Traducteur s'av\u00e8rent souvent plus fluides \u00e0 la lecture. L\u00e0 o\u00f9 Google Traduction forme des chaines de mots totalement d\u00e9pourvues de sens, DeepL Traducteur parvient au moins \u00e0 deviner un lien.\n", "translator\/affiliation_wired_de": "<a href='https:\/\/www.wired.de\/collection\/tech\/deepl-google-translate-linguee'>WIRED.de<\/a><br>Allemagne", "translator\/quote_abc": "Le syst\u00e8me identifie la langue rapidement et automatiquement, puis traduit les mots dans la langue de votre choix en essayant d'ajouter des nuances et expressions linguistiques.", "translator\/affiliation_abc": "<a href='http:\/\/www.abc.es\/tecnologia\/informatica\/software\/abci-cual-mejor-servicio-traduccion-online-deepl-quiere-desterrar-google-201708291325_noticia.html'>ABC<\/a><br>Espagne", "translator\/quote_wwwhatsnew": "DeepL Traducteur, un service de traduction en ligne qui surclasse Google, Microsoft et Facebook.", "translator\/affiliation_wwwhatsnew": "<a href='https:\/\/wwwhatsnew.com\/2017\/08\/29\/deepl-un-traductor-online-que-supera-al-de-google-microsoft-y-facebook\/'>wwwhat's new<\/a><br>Am\u00e9rique latine", "translator\/quote_lemonde": " <small style=\"color:#888\">...<\/small> DeepL a \u00e9galement obtenu de meilleurs r\u00e9sultats que les autres services, gr\u00e2ce \u00e0 des tournures de phrase plus \u00ab&nbsp;fran\u00e7aises&nbsp;\u00bb <small style=\"color:#888\"> ...<\/small>", "translator\/affiliation_lemonde": "<a href='http:\/\/www.lemonde.fr\/pixels\/article\/2017\/08\/29\/quel-est-le-meilleur-service-de-traduction-en-ligne_5177956_4408996.html?xtmc=deepl&xtcr=1'>Le Monde<\/a><br>France", "translator\/quote_repubblica": " DeepL Traducteur a d\u00e9montr\u00e9 sa pr\u00e9cision d\u00e8s le premier test, de l'anglais vers l'italien. DeepL Traducteur saisit avec brio le sens des phrases, et \u00e9vite les travers de la traduction litt\u00e9rale. ", "translator\/affiliation_repubblica": "<a href='http:\/\/www.repubblica.it\/tecnologia\/prodotti\/2017\/08\/29\/news\/arriva_deepl_il_traduttore_automatico_che_sfida_google-174078830\/'>La Repubblica<\/a><br>Italie", "translator\/quote_la_stampa": "Un test rapide effectu\u00e9 dans la combinaison de langues anglais-italien et vice-versa nous permet de confirmer, sans aucune pr\u00e9tention statistique, que la traduction est d'excellente qualit\u00e9. En particulier de l'italien vers l'anglais.", "translator\/affiliation_la_stampa": "<a href='http:\/\/www.lastampa.it\/2017\/08\/29\/tecnologia\/news\/deepl-traduttore-dalla-germania-unalternativa-a-google-translate-uHXifbhlSKzsB5uN8LYknO\/pagina.html'>La Stampa<\/a><br>Italie", "translator\/quote_rtlz": "Il suffit en effet de quelques tests pour constater que DeepL Traducteur offre de meilleures traductions que Google Traduction pour la combinaison de langues n\u00e9erlandais-anglais et vice-versa. ", "translator\/affiliation_rtlz": "<a href='https:\/\/www.rtlnieuws.nl\/tech\/artikel\/2511851\/duits-bedrijf-belooft-betere-vertalingen-dan-google-translate'>RTL Z<\/a><br>Pays-Bas", "appDownload\/ios_headerSection_title": "DeepL pour iOS", "appDownload\/ios_headerSection_subtitle": "Surmontez les barri\u00e8res linguistiques gr\u00e2ce au meilleur traducteur automatique du monde.", "appDownload\/ios_qrCode_subtitle": "Scannez le code pour t\u00e9l\u00e9charger l'application", "translator\/proAd.2021.title": "Profitez de DeepL au maximum \u2013 <strong>Essayez DeepL&nbsp;Pro gratuitement<\/strong>\u2013", "translator\/proAd.2021.button": "Essayer DeepL Pro gratuitement pendant 30 jours", "translator\/proAd.2021.free.title": "Version gratuite de DeepL", "translator\/proAd.2021.free.bullet1": "Traductions limit\u00e9es \u00e0 5&nbsp;000 caract\u00e8res", "translator\/proAd.2021.free.bullet2": "Traduction de 3 documents par mois (fichiers non modifiables)", "translator\/proAd.2021.free.bullet3": "10 entr\u00e9es de glossaire", "translator\/proAd.2021.pro.title": "Avantages offerts par DeepL Pro", "translator\/proAd.2021.pro.bullet1": "Protection maximale des donn\u00e9es", "translator\/proAd.2021.pro.bullet2": "Traduction de textes en illimit\u00e9", "translator\/proAd.2021.pro.bullet3": "Plus de traductions de documents (fichiers modifiables)", "translator\/proAd.2021.pro.link": "D\u00e9couvrez tous les autres avantages...", "translator\/notification_tooManyRequests_title": "Acc\u00e8s <b>suspendu temporairement<\/b>", "translator\/notification_tooManyRequests_description": "Il semble que votre r\u00e9seau envoie un nombre trop important de requ\u00eates \u00e0 nos serveurs. Veuillez r\u00e9essayer plus tard ou vous abonner \u00e0 DeepL Pro pour traduire un volume de textes beaucoup plus important.", "translator\/notification_tooManyRequests_cta_title_p1": "S'abonner \u00e0", "translator\/notification_tooManyRequests_cta_title_p2": "<b>DeepL Pro<\/b>", "translator\/notification_tooManyRequests_cta_back": "Revenir au Traducteur", "translator\/notification_tooManyRequests_ipblock_note": "Si vous pensez avoir re\u00e7u ce message par erreur, veuillez contacter le responsable de votre d\u00e9partement informatique et lui demander d'envoyer votre adresse IP et les r\u00e9sultats de la recherche \u00ab whois-query \u00bb \u00e0 <a href=\"mailto:block@deepl.com\">block@DeepL.com<\/a>.", "translator\/proAd.banner.or": "ou", "pro-home\/freeTrialButton2": "Essai gratuit de 30 jours", "pro-home\/pricing.benefits_security": "Protection des donn\u00e9es", "pro-home\/pricing.benefits_web_short": "Traducteur en ligne illimit\u00e9", "translator\/formality.feedback.score.title": "D\u00e9finir un niveau de formalit\u00e9 m'a permis de traduire plus efficacement.", "translator\/formality.feedback.score.disagree": "Pas du tout d'accord", "translator\/formality.feedback.score.agree": "Tout \u00e0 fait d'accord", "translator\/formality.feedback.explanation.title": "Qu'avez-vous appr\u00e9ci\u00e9 lors de cette exp\u00e9rience ? Quels points seraient \u00e0 am\u00e9liorer ?", "translator\/formality.feedback.send": "Envoyer le feedback", "translator\/formality.feedback.explanation.input": "Veuillez saisir votre message ici.", "translator\/formality.feedback.done": "Merci !", "translator\/selectLang.source.auto": "langue d\u00e9tect\u00e9e automatiquement", "translator\/shortLang.source.auto": "langue d\u00e9tect\u00e9e automatiquement", "translator\/selectLang.source.en": "anglais", "translator\/selectLang.source.de": "allemand", "translator\/selectLang.source.fr": "fran\u00e7ais", "translator\/selectLang.source.es": "espagnol", "translator\/selectLang.source.pt": "portugais", "translator\/selectLang.source.it": "italien", "translator\/selectLang.source.nl": "n\u00e9erlandais", "translator\/selectLang.source.pl": "polonais", "translator\/selectLang.source.ru": "russe", "translator\/formality.selector.menu.formal": "formel", "translator\/formality.selector.menu.informal": "informel", "translator\/formality.selector.menu.auto": "automatique", "translator\/formality.selector.menu.title": "Terme d'adresse&nbsp;:", "translator\/formality.selector.active.formal": "formel", "translator\/formality.selector.active.informal": "informel", "translator\/formality.selector.active.auto": "automatique", "translator\/formality.selector.inactive": "formel\/informel", "translator\/formality.type.formal": "formel", "translator\/formality.type.informal": "informel", "translator\/formality.type.auto": "automatique", "translator\/formality.tooltip": "Choisissez le vouvoiement ou le tutoiement", "translator\/formality.switch.description": "En {{{langLabel}}}, \"{{{formalLabel}}}\" est utilis\u00e9 dans le discours formel, et \"{{{informalLabel}}}\" dans le discours informel.", "translator\/formality.label.formal.de": "Sie", "translator\/formality.label.informal.de": "du", "translator\/formality.label.formal.fr": "vous", "translator\/formality.label.informal.fr": "tu", "translator\/formality.label.formal.es": "usted", "translator\/formality.label.informal.es": "t\u00fa", "translator\/formality.label.formal.it": "lei", "translator\/formality.label.informal.it": "tu", "translator\/formality.label.formal.pt-pt": "voc\u00ea", "translator\/formality.label.informal.pt-pt": "tu", "translator\/formality.label.formal.pt-br": "o senhor\/a senhora", "translator\/formality.label.informal.pt-br": "voc\u00ea", "translator\/formality.label.formal.nl": "u", "translator\/formality.label.informal.nl": "jij\/je", "translator\/formality.label.formal.pl": "Pa\u0144stwo", "translator\/formality.label.informal.pl": "ty", "translator\/formality.label.formal.ru": "\u0412\u044b", "translator\/formality.label.informal.ru": "\u0442\u044b", "translator\/formality.ad.header": "Choisissez le ton ad\u00e9quat", "translator\/formality.ad.body": "Personnalisez vos traductions en utilisant le vouvoiement ou le tutoiement avec <b>DeepL&nbsp;Pro<\/b>.", "translator\/ad.cta.goPro": "Essai gratuit de 30&nbsp;jours", "translator\/ad.cta.goPro_short": "Essayer DeepL Pro gratuitement", "translator\/selectLang.source.bg": "bulgare", "translator\/selectLang.source.cs": "tch\u00e8que", "translator\/selectLang.source.da": "danois", "translator\/selectLang.source.et": "estonien", "translator\/selectLang.source.fi": "finnois", "translator\/selectLang.source.el": "grec", "translator\/selectLang.source.hu": "hongrois", "translator\/selectLang.source.lv": "letton", "translator\/selectLang.source.lt": "lituanien", "translator\/selectLang.source.ro": "roumain", "translator\/selectLang.source.sk": "slovaque", "translator\/selectLang.source.sl": "slov\u00e8ne", "translator\/selectLang.source.sv": "su\u00e9dois", "translator\/shortLang.source.en": "anglais", "translator\/shortLang.source.de": "allemand", "translator\/shortLang.source.fr": "fran\u00e7ais", "translator\/shortLang.source.es": "espagnol", "translator\/shortLang.source.pt": "portugais", "translator\/shortLang.source.it": "italien", "translator\/shortLang.source.nl": "n\u00e9erlandais", "translator\/shortLang.source.pl": "polonais", "translator\/shortLang.source.ru": "russe", "translator\/shortLang.source.ja": "japonais", "translator\/shortLang.source.zh": "chinois", "translator\/shortLang.source.bg": "bulgare", "translator\/shortLang.source.cs": "tch\u00e8que", "translator\/shortLang.source.da": "danois", "translator\/shortLang.source.et": "estonien", "translator\/shortLang.source.fi": "finnois", "translator\/shortLang.source.el": "grec", "translator\/shortLang.source.hu": "hongrois", "translator\/shortLang.source.lv": "letton", "translator\/shortLang.source.lt": "lituanien", "translator\/shortLang.source.ro": "roumain", "translator\/shortLang.source.sk": "slovaque", "translator\/shortLang.source.sl": "slov\u00e8ne", "translator\/shortLang.source.sv": "su\u00e9dois", "translator\/selectLang.target.bg": "bulgare", "translator\/selectLang.target.cs": "tch\u00e8que", "translator\/selectLang.target.da": "danois", "translator\/selectLang.target.et": "estonien", "translator\/selectLang.target.fi": "finnois", "translator\/selectLang.target.el": "grec", "translator\/selectLang.target.hu": "hongrois", "translator\/selectLang.target.lv": "letton", "translator\/selectLang.target.lt": "lituanien", "translator\/selectLang.target.ro": "roumain", "translator\/selectLang.target.sk": "slovaque", "translator\/selectLang.target.sl": "slov\u00e8ne", "translator\/selectLang.target.sv": "su\u00e9dois", "translator\/shortLang.target.bg": "bulgare", "translator\/shortLang.target.cs": "tch\u00e8que", "translator\/shortLang.target.da": "danois", "translator\/shortLang.target.et": "estonien", "translator\/shortLang.target.fi": "finnois", "translator\/shortLang.target.el": "grec", "translator\/shortLang.target.hu": "hongrois", "translator\/shortLang.target.lv": "letton", "translator\/shortLang.target.lt": "lituanien", "translator\/shortLang.target.ro": "roumain", "translator\/shortLang.target.sk": "slovaque", "translator\/shortLang.target.sl": "slov\u00e8ne", "translator\/shortLang.target.sv": "su\u00e9dois", "messages\/appWorkflow.appDelayText": "Le trafic est \u00e9lev\u00e9 sur la version gratuite de DeepL Traducteur. Votre traduction sera disponible dans ${seconds} secondes.", "translator\/shareMenu.translationShortenedHint": "Votre traduction est trop longue. Vous ne pouvez en partager que ${percentage_shareable}.", "translator\/ad.source.charLimit.limitReachedInfo": "Caract\u00e8res traduits&nbsp;: <strong>seulement 5&nbsp;000\/${num_chars}<\/strong>", "glossary\/customization": "Glossaire", "glossary\/customization_error_message": "La traduction n'est pas personnalisable actuellement. Veuillez r\u00e9essayer ult\u00e9rieurement.", "glossary\/editor_explanation": "Modifiez ici les entr\u00e9es de votre glossaire, et ajoutez-en de nouvelles.", "glossary\/editor_placeholder_source_text": "Texte source", "glossary\/editor_placeholder_target_text": "Texte cible", "glossary\/editor_invalid_character": "Vous avez entr\u00e9 un caract\u00e8re non autoris\u00e9.", "glossary\/dialog_more_suggestions": "Autres suggestions", "glossary\/dialog_title": "Enregistrer cette r\u00e8gle dans :", "glossary\/dialog_yes": "Oui", "glossary\/dialog_no": "Non", "glossary\/dialog_save": "Enregistrer", "glossary\/tooltip_customization_button": "Choisissez la traduction de certains mots.", "glossary\/pro_ad_headline": "DeepL Pro vous permet d'ajouter autant d'entr\u00e9es que vous le souhaitez \u00e0 votre glossaire.", "glossary\/pro_ad_subtext": "Exploitez tout le potentiel des fonctionnalit\u00e9s de personnalisation de DeepL et affirmez la marque de votre style dans chacune de vos traductions.", "glossary\/pro_ad_bullet_point_1": "Entr\u00e9es de glossaire illimit\u00e9es", "glossary\/pro_ad_bullet_point_2": "Protection des donn\u00e9es", "glossary\/pro_ad_button_try_pro": "Essayez-le gratuitement (30 jours)", "glossary\/pro_ad_button_cancel": "Revenir au Traducteur", "glossary\/pro_ad_or": "ou", "glossary\/pro_upload_ad_headline": "Personnalisez vos traductions en important vos propres glossaires", "glossary\/pro_upload_ad_subtext": "Prenez un forfait DeepL Pro Advanced ou Ultimate et importez facilement vos glossaires personnels en format CSV.", "glossary\/add_new_glossary": "Ajouter un nouveau glossaire", "glossary\/default_glossary_name": "Glossaire par d\u00e9faut", "glossary\/create_manually": "Cr\u00e9er manuellement", "glossary\/create": "Cr\u00e9er", "glossary\/name_your_glossary": "Nom du glossaire", "glossary\/glossary_add_button_label": "Ajouter", "glossary\/advanced_ad_headline": "Cr\u00e9ez plusieurs glossaires avec DeepL Pro Advanced", "glossary\/advanced_ad_subtext": "Personnalisez automatiquement vos traductions en fonction de vos destinataires, de vos styles de communication ou d'une terminologie sp\u00e9cialis\u00e9e. DeepL Pro Advanced vous permet de cr\u00e9er un glossaire pour chaque usage et chaque situation.", "glossary\/advanced_ad_bullet_point_1": "Personnalisation illimit\u00e9e", "glossary\/advanced_ad_bullet_point_2": "S\u00e9curit\u00e9 maximale des donn\u00e9es", "glossary\/advanced_ad_button_try_pro": "En savoir plus", "glossary\/advanced_ad_button_cancel": "Revenir \u00e0 la page pr\u00e9c\u00e9dente", "glossary\/explanation_headline": "D\u00e9finissez la traduction de certains termes et expressions.", "glossary\/explanation_subtext": "La grammaire ? DeepL s'en occupe ! DeepL Traducteur adaptera les entr\u00e9es de votre glossaire dans toutes vos traductions.", "glossary\/explanation_example": "Par exemple :", "glossary\/edit": "modifier", "glossary\/delete": "effacer", "glossary\/first_entry_choose": "D\u00e9finissez la traduction de certains mots et expressions", "glossary\/first_entry_choose.alternative": "D\u00e9finissez des r\u00e8gles de traduction pour certains mots et expressions", "glossary\/first_entry_replace": "Remplacer :", "glossary\/first_entry_with": "Par :", "glossary\/first_entry_example_DE_painter": "ex. : Maler", "glossary\/first_entry_example_EN_painter": "ex. : artist", "glossary\/first_entry_example_placeholder_de": "ex. Guten Tag!", "glossary\/first_entry_example_placeholder_en": "ex. Hello!", "glossary\/first_entry_example_placeholder_es": "ex. \u00a1Buenos d\u00edas!", "glossary\/first_entry_example_placeholder_fr": "ex. Bonjour !", "glossary\/first_entry_fill_both_words": "Veuillez remplir les deux champs", "glossary\/upload_glossary": "Importer un glossaire", "glossary\/upload_file_label": "S\u00e9lectionnez un fichier CSV", "glossary\/upload_file_formatting_guidelines": "Veuillez suivre les consignes de formatage", "glossary\/upload_file_hint2": "Le fichier ne doit contenir aucun commentaire", "glossary\/upload_file_hint3": "Une seule combinaison de langues par fichier (ex. : anglais > fran\u00e7ais)", "glossary\/upload_file_hint4": "La premi\u00e8re ligne du fichier CSV doit contenir la premi\u00e8re entr\u00e9e (ex. : artist;peintre)", "glossary\/upload_file_hint5": "Max. 5 000 entr\u00e9es", "glossary\/upload_file_error": "Veuillez v\u00e9rifier votre fichier et suivre les consignes de formatage", "glossary\/separator": "S\u00e9parateur", "glossary\/separator_type_tab": "Tabulation", "glossary\/separator_type_comma": "Virgule", "glossary\/separator_type_semicolon": "Point-virgule", "glossary\/separator_auto_detected_tab": "Tabulation (d\u00e9tect\u00e9e)", "glossary\/separator_auto_detected_comma": "Virgule (d\u00e9tect\u00e9e)", "glossary\/separator_auto_detected_semicolon": "Point-virgule (d\u00e9tect\u00e9)", "glossary\/language_pair": "Combinaison", "glossary\/upload": "Importer", "glossary\/download": "T\u00e9l\u00e9charger", "glossary\/advanced_upload_accesspoint_title": "D\u00e9finissez la traduction de certains mots et expressions", "glossary\/advanced_upload_accesspoint_button_upload": "Importer un glossaire (.csv)", "glossary\/advanced_upload_accesspoint_button_manually": "Cr\u00e9er un glossaire manuellement", "glossary\/confirm_delete_text": "Cette action est irr\u00e9versible.", "glossary\/confirm_delete_button_delete": "Effacer", "glossary\/confirm_delete_button_cancel": "Annuler", "genericDialog.cancelButton": "Annuler", "common\/component.fileUpload.label": "Parcourir", "glossary\/dialog_question": "Traduire ${sourceText} par ${targetText}. Souhaitez-vous enregistrer cette r\u00e8gle ?", "glossary\/dialog_question_with_save_option": "Traduire ${sourceText} par ${targetText}", "glossary\/tooltip_highlight_text": "Le terme ${sourceText} sera d\u00e9sormais traduit par ${targetText}.", "glossary\/first_entry_customize": "Personnalisez vos traductions ${sourceLang}-${targetLang}.", "glossary\/upload_errors": "Votre fichier a bien \u00e9t\u00e9 import\u00e9, mais les lignes suivantes n'ont pas pu \u00eatre lues : ${erroneousLines}. Vous pouvez toutefois les ajouter manuellement.", "glossary\/confirm_delete_title": "Souhaitez-vous vraiment effacer \u00ab ${glossaryName} \u00bb ?" });
+        </script>
+        <div id='dl_translator' class='lmt lmt--empty_source dl_top_element--wide lmt--web'>
+            <div class='lmt__docTrans-tab-container'></div>
+
+            <div class='lmt__stickyMenubar_background lmt__stickyMenubar_background--hide'
+                dl-test="lmt__stickyMenubar_background"></div>
+
+            <div class="lmt__text">
+                <div class='lmt__translationDescription'></div>
+                <script>if (window._initialTranslatorState && window._initialTranslatorState.checked) { const tLangCode = window._initialTranslatorState.targetLangcode; const sLangName = dl_texts['translator/selectLang.source.' + window._initialTranslatorState.sourceLangcode]; const tLangName = dl_texts['translator/selectLang.target.' + tLangCode.substr(0, 2) + (tLangCode.length > 2 ? '.' + tLangCode : '')]; const s = (window._initialTranslatorState.sourceText ? '${translated_word} - Traduction ${source_language} > ${target_language}' : 'DeepL Traducteur ${source_language} > ${target_language}').replace('${source_language}', sLangName).replace('${target_language}', tLangName).replace('${translated_word}', window._initialTranslatorState.sourceText); const n = document.createElement('h1'); n.innerText = s; const n2 = document.querySelector('meta[name=description]'); n2 && (n2.setAttribute('content', s + '\n' + n2.getAttribute('content'))); const t = document.querySelector('.lmt__translationDescription'); t && (t.appendChild(n)); document.title = document.title.replace('(' + window._initialTranslatorState.sourceLangcode + ')', '(' + sLangName + ' → ' + tLangName + ')'); window._initialTranslatorState.revert.push(function () { t.innerHTML = ''; n2 && n2.parentNode.removeChild(n2); }) }</script>
+                <!-- Popup modals -->
+                <div class='lmt__progress_popup' dl-test='translator-progress-popup'>
+                    <div>
+                        <div class='lmt__busy_indicator lmt__busy_indicator--active'></div>
+                        <p dl-text-template="%%percentage%% des caractères ont été traduits">&nbsp;</p>
+                        <div class='lmt__progress_popup__progress'>
+                            <div></div>
+                        </div>
+                        <a class='lmt__progress_popup__stop_button' tabindex='0'>Arrêter la traduction</a>
+                    </div>
+                </div>
+                <div id='lmt__mobile_language_selector'></div>
+                <div class='lmt__sides_container'>
+                    <div class='lmt__side_container lmt__side_container--source' dl-test="translator-source">
+                        <div class='lmt__language_container'>
+                            <div class='lmt__language_select lmt__language_select--source'
+                                dl-test="translator-source-lang">
+                                <button class="lmt__language_select__active" dl-test="translator-source-lang-btn"
+                                    tabindex="98" style="display:none;">
+                                    <span class="lmt__language_select__active__title">
+                                        <span class="translate_from">Texte original en&nbsp;:
+                                        </span><strong><span></span>langue détectée automatiquement</strong> </span>
+                                    <div class='lmt__language_select__opener'></div>
+                                </button>
+
+                            </div>
+                        </div>
+                        <button type='button' class='lmt__clear_text_button' dl-test="translator-source-clear-button">
+                            <span>&times;</span>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.6588 1L1 16" stroke="black" stroke-width="2" stroke-linecap="round" />
+                                <path d="M1.34119 1L16 16" stroke="black" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                        <!-- outer container is set to scrollable on mobile -->
+                        <div class='lmt__textarea_container'>
+                            <div class="lmt__doc_errors error__source error_text_tab"></div>
+                            <div class='lmt__inner_textarea_container'>
+                                <textarea class='lmt__textarea lmt__source_textarea lmt__textarea_base_style'
+                                    data-gramm_editor="false" tabindex='110' dl-test="translator-source-input"
+                                    autocomplete="off"></textarea>
+                                <div id='source-dummydiv' class='lmt__textarea lmt__textarea_dummydiv'></div>
+
+                                <span class='dl_visible_desktop_only'>
+                                    <span class='lmt__textarea_placeholder_text'>
+                                        <div>Écrivez ou collez votre texte ici.</div>
+                                        <div>Pour traduire un document, déposez votre fichier Word ou Powerpoint ici.
+                                        </div>
+                                        <div>Combinaisons populaires : anglais-français, espagnol-français,
+                                            allemand-français.</div>
+                                        <div><br>Autres langues : bulgare, chinois, danois, estonien, finnois, grec,
+                                            hongrois, italien, japonais, letton, lituanien, néerlandais, polonais,
+                                            portugais, roumain, russe, slovaque, slovène, suédois, tchèque.</div>
+                                    </span>
+                                </span>
+                                <span class='dl_visible_handheld_only'>
+                                    <span class='lmt__textarea_placeholder_text'>
+                                        Écrivez ou collez votre texte ici </span>
+                                </span>
+
+                                <div dl-attr='content: docTrans.dropTargetOverlay'></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class='lmt__textarea_separator lmt__textarea_separator--left
+        lmt__textarea_separator--has-top-toolbar'>
+                        <div class='lmt__textarea_separator__vertical_line'></div>
+                    </div>
+
+
+                    <div class='lmt__side_container lmt__side_container--target' dl-test="translator-target">
+                        <div class='lmt__language_container'>
+                            <div class='lmt__language_container_switch lmt__language_container_switch--disabled'>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M5 13.8317L6.57731 12.2972V15.3661L5 13.8317ZM5 13.8317H14.5"
+                                        stroke="#0F2B46" stroke-width="2" />
+                                    <path d="M14.5 6.53448L12.9227 5V8.06897L14.5 6.53448ZM14.5 6.53448H5"
+                                        stroke="#0F2B46" stroke-width="2" />
+                                </svg>
+                                <div class='lmt__language_container_switch__tooltip_container'></div>
+                            </div>
+                            <div class='lmt__language_container_prim'>
+                                <div class='lmt__language_select lmt__language_select--target'
+                                    dl-test="translator-target-lang">
+                                    <button class="lmt__language_select__active" dl-test="translator-target-lang-btn"
+                                        tabindex="99" style="display:none;">
+                                        <span class="lmt__language_select__active__title">
+                                            <span class="translate_to">Traduction en&nbsp;:
+                                            </span><strong>allemand</strong> </span>
+                                        <div class='lmt__language_select__opener'></div>
+                                    </button>
+                                    <div class="rg-badge-container-DF-2084"
+                                        style="position: absolute; margin-top: -16px;"></div>
+                                </div>
+                                <div class="lmt__targetLangMenu_extensions">
+                                </div>
+                            </div>
+                            <div class='lmt__language_container_sec'>
+                                <div class="lmt__targetLangMenu_extensions">
+                                    <div class="lmt__targetLangMenu_extension">
+                                        <div class="lmt__formalitySwitch_container"></div>
+                                    </div>
+
+                                    <div class="lmt__targetLangMenu_extension">
+                                        <div class="lmt__glossaryButton_container_react"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dl-attr='content: translator.targetAreaAdditions'></div>
+
+                        <div class='lmt__textarea_container'>
+                            <div class='lmt__inner_textarea_container'>
+                                <textarea
+                                    class='lmt__textarea lmt__target_textarea lmt__textarea_base_style dl_disabled'
+                                    data-gramm_editor="false" disabled tabindex='110' dl-test="translator-target-input"
+                                    autocomplete="off">
+                            </textarea>
+                                <div id='target-dummydiv' class='lmt__textarea lmt__textarea_dummydiv'></div>
+                            </div>
+                            <div class="lmt__loadingIndicator_container"></div>
+                            <div class='lmt__translations_as_text' dl-test='translator-target-result-as-text-container'>
+                            </div>
+
+                            <div class="lmt__formalitySwitch_ad_container_desktop"></div>
+
+                        </div>
+
+                        <div id="targetHighlightTooltipPortal"></div>
+                        <div class="lmt__formalitySwitch_feedback_container"></div>
+                    </div>
+
+                    <div class="lmt__formalitySwitch_ad_container_mobile lmt__formalitySwitch_ad_container_app"></div>
+
+                    <div id="lmt__ad_container_app"></div>
+
+                    <div class="dl_visible_handheld_only lmt__bottom_text--mobile">
+                        <div><strong>Des millions d'utilisateurs traduisent tous les jours avec DeepL</strong></div>
+                        <div>Combinaisons populaires : anglais-français, espagnol-français, allemand-français.<br>Autres
+                            langues : bulgare, chinois, danois, estonien, finnois, grec, hongrois, italien, japonais,
+                            letton, lituanien, néerlandais, polonais, portugais, roumain, russe, slovaque, slovène,
+                            suédois, tchèque.</div>
+                    </div>
+                </div>
+
+
+                <div id='lmt__dict' class='lmt__dict' dl-test="translator-dict">
+                    <div class="lmt__app_dict__header" style="display: none">
+                        <button class="lmt__app_dict__header_btn">
+                            <span class="lmt__app_dict__header_btn_text">Dictionary</span>
+                            <span class="lmt__app_dict__header_btn_icon"></span>
+                        </button>
+                    </div>
+                    <div class="lmt__dict__inner"></div>
+                </div>
+            </div>
+
+            <div class="lmt__doc dl_hidden">
+                <div class="lmt__extensions_container">
+                    <div class="lmt__doc_errors error__banner error_doc_tab"></div>
+                </div>
+                <div class='lmt__sides_container'>
+                    <div class='lmt__side_container lmt__side_container--source' dl-test="translator-source">
+                        <div class="lmt__textarea_container">
+                            <div dl-attr='content: docTrans.dropTargetOverlay'></div>
+
+                            <div class='docTrans__help_popup' dl-test="doctrans-upload-help">
+                                <div class="lmt__doc_errors error__source error_doc_tab"></div>
+                                <div class="docTrans__help_popup__container">
+                                    <div class="docTrans__help_popup__icons">
+                                        <img src='https://static.deepl.com/img/icons/icon_docx_v2.svg'
+                                            alt='Icon for docx file format' />
+                                        <span class="docTrans__help_popup__icons__sep">&amp;</span>
+                                        <img src='https://static.deepl.com/img/icons/icon_pptx_v2.svg'
+                                            alt='Icon for pptx file format' />
+                                    </div>
+                                    <div class="docTrans__help_popup__desc">
+                                        <div class='docTrans__help_popup_text'>
+                                            <div class="lmt__doc_errors error_source error_text"></div>
+                                            <p class='dl_visible_free_only'>Déposez ici votre fichier Word (.docx) ou
+                                                PowerPoint (.pptx)</p>
+                                            <p class='dl_visible_pro_only'>Déposez ici votre fichier Word (.docx),
+                                                PowerPoint (.pptx) ou .txt</p>
+                                            <p class='dl_help-popup_assist-text'>ou</p>
+                                        </div>
+                                        <div id='docTrans__file-upload-button'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='lmt__textarea_separator lmt__textarea_separator--left
+        '>
+                        <div class='lmt__textarea_separator__vertical_line'></div>
+                    </div>
+
+                    <div class='lmt__side_container lmt__side_container--target' dl-test="translator-source">
+                        <div class="lmt__textarea_container">
+                            <div class='lmt__doc_errors error__target error_doc_tab'></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="document_translator__panel"></div>
+                <div class='docTrans_usage_info__outer' dl-attr='content: docTransUsage.content'></div>
+            </div>
+
+            <div dl-attr='content: usingProHint'></div>
+            <div class='lmt__ask_paste_popup'>
+                <div>
+                    <p
+                        dl-text-template="Vous essayez d'insérer un texte de grande taille (%%num%% caractères). Nous vous suggérons de diviser le texte en parts plus petites afin d'améliorer les performances du traducteur et d'éviter d'éventuels problèmes de mémoire à votre navigateur.">
+                        &nbsp;</p>
+                    <a class='lmt__ask_paste_popup__cancel_button' tabindex='0'>Annuler</a>
+                    <a class='lmt__ask_paste_popup__continue_button' tabindex='0'>Traduire quand même</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            if (window._initialTranslatorState && window._initialTranslatorState.sourceText) {
+                const r = document.querySelector('.lmt');
+                r.classList.remove('lmt--empty_source');
+                const s = r.querySelector('.lmt__source_textarea')
+                if (s) {
+                    s.value = window._initialTranslatorState.sourceText;
+                }
+            }
+        </script>
+
+        <!-- ================ -->
+
+        <template dl-template='lmt_targetToolbar__container'>
+            <div class='lmt__target_toolbar' dl-attr='class{lmt__target_toolbar--visible}: $0.isVisible'
+                dl-test='translator-target-toolbar'>
+                <div class="lmt_targetToolbar__appPromotion_container"></div>
+            </div>
+        </template>
+
+        <template dl-template='lmt_sourceToolbar__container'>
+            <div class='lmt__source_toolbar' dl-attr='class{lmt__source_toolbar--visible}: $0.isVisible'
+                dl-test='translator-source-toolbar'>
+            </div>
+        </template>
+
+        <template dl-template='lmt_speakerButton'>
+            <!-- attribute 'dl-test' is set programmatically, see speakerButtonSource.js/speakerButtonTarget.js -->
+            <div class='lmt__speaker'
+                dl-attr="classIf{lmt__speaker--hidden}: $0.isSpeakerHidden, onClick: $0.onSpeakerButtonClick"
+                title="Écouter">
+                <button type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="100%" viewBox="0 0 40 40"
+                        preserveAspectRatio="xMidYMid meet">
+                        <g transform="scale(0.98, 0.98)">
+                            <path
+                                d="M 7.884853,12.424014 23.21526,0.96784542 23.111675,39 7.884853,27.660137 Z m -6.88832424,0 H 7.884853 V 27.660137 H 1.2036965 Z M 35.707469,7.9694829 c 4.873002,8.0600461 4.403172,15.8522791 0,23.4473471 M 30,10.679419 c 3.981093,6.196125 4.388312,12.257683 -0.0518,18.143782"
+                                style="fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                        </g>
+                    </svg>
+                </button>
+                <div class='lmt__toolbar__speaker_tooltip_container'></div>
+            </div>
+        </template>
+
+        <!-- ================ glossary ================ -->
+
+        <div id="glossarySuggestionsDialogPortal"></div>
+
+        <template dl-template="lmt__glossary_highlightTooltip">
+            <div id="targetHighlightTooltip" class="lmt__glossary_tooltip" dl-test="glossary-highlight-tooltip">
+                <span dl-attr="text: $0.textTooltip1"></span>
+                <span class="columnSource" dl-attr="text: $0.textSource, attr{lang}: $0.langSource"></span>
+                <span dl-attr="text: $0.textTooltip2"></span>
+                <span class="columnTarget"
+                    dl-attr="text: $0.textTarget, class{padRight}: $0.padRight, attr{lang}: $0.langTarget"></span>
+                <span dl-attr="text: $0.textTooltip3"></span>
+            </div>
+        </template>
+
+        <!-- app promotion (DF-1581) -->
+        <template dl-template='lmt_targetToolbar__appPromotion'>
+            <div class="lmt_targetToolbar__appPromotion" dl-attr="isVisible: $0.isAdVisible">
+                <div class="lmt_targetToolbar__appPromotion__content_container">
+                    <div class="lmt_targetToolbar__appPromotion__content">
+                        <span class="lmt_targetToolbar__appPromotion__icon"></span>
+                        <span class="lmt_targetToolbar__appPromotion__body">
+                            <span class="lmt_targetToolbar__appPromotion__description"
+                                dl-attr="text: $0.description"></span>
+                            <span>
+                                <span class="lmt_targetToolbar__appPromotion__cta">
+                                    <a href="/app" target="_blank">Téléchargez l'application gratuitement&nbsp;</a>!
+                                </span>
+                            </span>
+                        </span>
+                        <span class="lmt_targetToolbar__appPromotion__close_btn__container">
+                            <button class="lmt_targetToolbar__appPromotion__close_btn"
+                                dl-attr="onClick: $0.doCloseAd"></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+        <template dl-template='lmt_app_delay'>
+            <div class='lmt__app_delay_no_pro_notification__outer_container'>
+                <div class='lmt__app_delay_no_pro_notification__inner_container'>
+                    <div class="lmt__app_delay_no_pro_notification__wait_animation_container">
+                        <div class="lmt__app_delay_no_pro_notification__ellipse_container"><img
+                                src="/img/apps/ellipse.png"></div>
+                        <div class="lmt__app_delay_no_pro_notification__hourglass"><img src="/img/apps/hourglass.png">
+                        </div>
+                    </div>
+                    <div class="lmt__app_delay_no_pro_notification__progress_animation">
+                        <span></span><span></span><span></span><span></span></div>
+                    <p class="lmt__app_delay_no_pro_notification__message" dl-attr="placeholderText:$0.placeholders">
+                        Le trafic est élevé sur la version gratuite de DeepL Traducteur. Votre traduction sera
+                        disponible dans ${seconds} secondes.</p>
+                    <p class="lmt__app_delay_no_pro_notification__footer">Obtenez des traductions plus rapidement avec
+                        <a
+                            href="https://www.deepl.com/pro.html?utm_source=win_app&utm_medium=banner&utm_campaign=perf_banner">DeepL
+                            Pro &rarr;</a></p>
+                </div>
+            </div>
+        </template>
+
+
+
+        <div id='lmt_pro_ad_container' dl-test="translator-proad"></div>
+        <div class='dl_body--redesign dl_top_element--wide dl_visible_desktop_only eSEOtericText'>
+            <script>
+                (function () {
+                    if (!dl_pageState.loginState) {
+                        // replace used to remove the unescaped line break in german and italian strings
+                        document.querySelector('.eSEOtericText').innerHTML = "<span><strong>Des millions de personnes utilisent DeepL tous les jours.</strong> Combinaisons populaires : anglais-français, espagnol-français, allemand-français.</span><span>Autres langues : bulgare, chinois, danois, estonien, finnois, grec, hongrois, italien, japonais, letton, lituanien, néerlandais, polonais, portugais, roumain, russe, slovaque, slovène, suédois, tchèque.</span>"
+                    }
+                })()
+            </script>
+        </div>
+
+        <script>
+            dl_documentReady(function () {
+                M.requireAsync(['WebTranslator_proAd', 'WebTranslator_appPopup', 'LMT_InitializedWebTranslatorInstance', 'dlPageState', 'DeviceProps'], function (WebTranslator_proAd, WebTranslator_appPopup, webTranslator, dlPageState, DeviceProps) {
+                    if (DeviceProps.isMobilePhone) {
+                        // Init status
+                        if (!webTranslator.sourceIsEmpty()) {
+                            WebTranslator_proAd.init();
+                        }
+                        // Listener
+                        webTranslator.sourceIsEmpty.onValueChanged.push(function (isSourceEmpty) {
+                            if (!isSourceEmpty) {
+                                WebTranslator_proAd.init();
+                                return 'REMOVE';
+                            }
+                        });
+                    } else {
+                        WebTranslator_proAd.init();
+                        WebTranslator_appPopup.init();
+                    }
+                });
+            });
+        </script>
+
+        <div id='dl_quotes_container'></div>
+
+        <div class="rg-badge-container-DF-1962 dl_top_element--wide"></div>
+        <div id="iosAppAdPortal" class="dl_top_element--wide"></div>
+    </div>
+
+    <div id="modalPortal"></div>
+
+    <div id="glossaryProAdPortal" class="lmt__glossary_ad"></div>
+    <div id="glossaryAdvancedAdPortal" class="lmt__glossary_ad"></div>
+
+    <!-- ============================== Footer ============================== -->
+
+
+    <footer class='dl_footer dl_top_element--wide' dl-test="dl-footer">
+        <div class="dl_footer__container">
+            <nav class='dl_footer__nav'>
+                <div class='dl_menu_items'>
+                    <span class='dl_footer__langselect dl_menu_item'><select
+                            onchange="location.href=this.value;localStorage.removeItem('user');" title="Site language"
+                            dl-test="language-selector" tabindex="500">
+                            <option value='/en/translator'>English</option>
+                            <option value='/de/translator'>Deutsch</option>
+                            <option value='/fr/translator' selected>Français</option>
+                            <option value='/es/translator'>Español</option>
+                            <option value='/ja/translator'>日本語</option>
+                            <option value='/pt-PT/translator'>Português</option>
+                            <option value='/pt-BR/translator'>Português (Brasil)</option>
+                            <option value='/it/translator'>Italiano</option>
+                            <option value='/nl/translator'>Nederlands</option>
+                            <option value='/pl/translator'>Polski</option>
+                            <option value='/ru/translator'>Русский</option>
+                            <option value='/zh/translator'>简体中文</option>
+                            <option value='/sv/translator'>Svenska</option>
+                        </select></span>
+                    <a class="dl_menu_item" tabindex="500" href='/press.html'>Presse</a>
+                    <a class="dl_menu_item" tabindex="500" href='/privacy.html'>Confidentialité</a>
+                    <a class="dl_menu_item" tabindex="500" href='/pro-license.html'>Conditions générales</a>
+                    <a class="dl_menu_item" tabindex="500" href='/publisher.html'>Mentions légales</a>
+                    <a class="dl_menu_item" tabindex="500" href='/jobs.html'>Offres d'emploi</a>
+                </div>
+            </nav>
+            <div class='dl_footer__socials'>
+                <a class='dl_footer__social dl_footer__social--twitter' target="_blank" tabindex="500"
+                    href='https://twitter.com/DeepLcom' title="Twitter" rel="noopener"></a>
+                <a class='dl_footer__social dl_footer__social--facebook' target="_blank" tabindex="500"
+                    href='https://www.facebook.com/DeepLcom/' rel="noopener"></a>
+                <a class='dl_footer__social dl_footer__social--linkedin' target="_blank" tabindex="500"
+                    href='https://www.linkedin.com/company/linkedin-com-company-deepl/' rel="noopener"></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        window.LMT_WebTranslator_Instance = new (M.get('LMT_WebTranslator'))({
+            isPro: dl_pageState.pro,
+            backend: dl_pageState.pro ?
+                'https://api.deepl.com/jsonrpc' :
+                'https://www2.deepl.com/jsonrpc',
+            initialState: window._initialTranslatorState,
+        });
+        M.register('LMT_WebTranslator_Instance', window.LMT_WebTranslator_Instance);
+        LMT_WebTranslator_Instance.initDom(document.querySelector("#dl_translator")); // early init
+    </script>
+
+    <template dl-template='lmt_usingProBanner'>
+        <div class="lmt__using_pro_notification_banner">
+            <div>
+                <h2>Vous êtes sur <em>DeepL Pro</em>.</h2>
+                <p>Vos textes ne sont pas conservés.</p>
+            </div>
+        </div>
+    </template>
+
+    <template dl-template='lmt_usingProBanner_2'>
+        <div class="lmt__using_pro_notification_banner">
+            <div>
+                <h2>DeepL Pro garantit la protection et la confidentialité de vos données</h2>
+                <p>Restez connecté afin d'assurer la sécurité de vos données</p>
+            </div>
+        </div>
+    </template>
+
+    <script src='https://static.deepl.com/js/sentry.min.$9e5521.js'></script>
+    <script src='https://static.deepl.com/js/ext/all3.min.$16b60e.js'></script>
+    <script src='https://static.deepl.com/js/utils.chunk.$3939a7.js'></script>
+    <script src='https://static.deepl.com/js/vendor.chunk.$001598.js'></script>
+    <script src='https://static.deepl.com/js/common.chunk.$99d332.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://static.deepl.com/css/translator_late.module.$dfdda9.css" />
+    <script src='https://static.deepl.com/js/translator_late.min.$ffeda3.js'></script>
+    <script src='https://static.deepl.com/js/webVitals.min.$8bab6f.js'></script>
+
+    <div id='dl_cookieBanner' dl-test='dl-cookieBanner'></div>
+
+    <link rel="stylesheet" type="text/css" href="https://static.deepl.com/css/cookieBanner.$a60946.css" />
+    <script src='https://static.deepl.com/js/cookieBanner.min.$643924.js' async></script>
+
+    <script>
+        M.define('LMT_InitializedWebTranslatorInstance', ['Translator_web', 'LMT_WebTranslator_Instance', 'LMT_WebTranslator_Dict', '$', 'dlPageState', 'dlClientState', 'dlPrivacy', 'DeviceProps', 'queryVars', 'H2'],
+            function (Translator_web, webTranslator, LMT_WebTranslator_Dict, $, dlPageState, dlClientState, dlPrivacy, DeviceProps, queryVars, H2) {
+                $("html").addClass("page_loaded");
+                Translator_web.initTranslator(webTranslator);
+                LMT_WebTranslator_Dict.initTranslator(webTranslator);
+
+                // Wait for glossary to be loaded (removeReason is in the glossary module) if it should be turned on
+                if (!DeviceProps.isMobilePhone) {
+                    webTranslator.features.get('/translator/core/updateSourceSentences').addReasonToDelayUpdates("waitingForGlossary");
+                }
+
+                if (!dlPageState.pro) {
+                    M.requireAsync('WebTranslator_quotes', function (WebTranslator_quotes) {
+                        WebTranslator_quotes.init();
+                    });
+                }
+
+
+                return webTranslator;
+            });
+    </script>
+
+    <script>
+        M.requireAsync(['H2', 'dlPageState'], function (H2, dlPageState) {
+            if (dlPageState.pro) {
+                document.querySelector('body').appendChild(H2.createNode({ tag: 'script', attributes: { src: 'https://static.deepl.com/js/notifications.min.$f52e4d.js' } }));
+                document.querySelector('body').appendChild(H2.createNode({ tag: 'script', attributes: { src: 'https://js.stripe.com/v3/' } }));
+            }
+        });
+
+    </script>
+    <script>
+        M.requireAsync(['H2', 'dlPageState'], function (H2, dlPageState) {
+            if (dlPageState.pro) {
+                document.querySelector('head').appendChild(H2.createNode({ tag: 'link', attributes: { rel: 'stylesheet', type: 'text/css', href: 'https://static.deepl.com/css/notifications.$a61088.css' } }));
+            }
+        });
+
+    </script>
+
+    <script src='https://static.deepl.com/js/busyIndicator.min.$69bcb6.js'></script>
+    <template dl-template='docTrans__generic_confirmation_popup'>
+        <div class='is3_modal_dialog is3_modal_dialog--small'
+            dl-attr='class{is3_modal_dialog--loading}: $0.status_loading, class{is3_modal_dialog--submitting}: $0.status_submitting, rootClass{is3--modal_dialog_opened}:$0.isOpen, removeIf:$0.isRemoved'>
+            <div class='is3_modal_dialog__background' dl-attr='clickTrigger: $0.doClose'></div>
+            <div class="is3_modal_dialog__window"
+                dl-attr='dlFieldErrors: $0.status_fieldErrors, attr{style}: $0._windowCss'>
+                <button class="is3_modal_dialog__close_button" dl-attr='hidden: $0.noClose, clickTrigger: $0.doClose'
+                    tabindex='0'>&times;</button>
+                <form onsubmit='return false;' target='_self' method='post' action=".">
+                    <div class='is3_modal_dialog__header'>
+                        <h3 dl-attr='content: $0.header'>HEADER</h3>
+                    </div>
+                    <div dl-attr='html: $0.content' class='is3_modal_dialog__content'>
+                        <div class='is3_element'>
+                            <p dl-attr='html: $0.contentText'>CONTENT</p>
+                        </div>
+                    </div>
+                    <div class='is3_element is3_element--error' dl-attr='html: $0.status_pageError_html'></div>
+                    <div class='is3_modal_dialog__buttons'>
+                        <button type='button' class='is3_modal_dialog__cancel_button'
+                            dl-attr='hidden: $0.noClose, clickTrigger: $0.doClose, html: $0.cancelText' tabindex='0'
+                            formnovalidate='1'>Annuler</button>
+                        <button type='submit' class='is3_modal_dialog__submit_button'
+                            dl-attr='clickTrigger: $0.doSubmit, html: $0.submitText' tabindex='0'
+                            formnovalidate='1'>Soumettre</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </template>
+
+    <template dl-template='docTrans_quota_exceeded_popup'>
+        <dl-node type='docTrans__generic_confirmation_popup' bind='isOpen, isRemoved, doClose, doSubmit'
+            dl-attr='placeholderText: $0'>
+            <dl-bind name='header'>
+                Vous avez atteint votre limite de traduction de documents
+            </dl-bind>
+            <dl-bind name='contentText'>
+                Vous ne pouvez plus traduire de documents pour le moment car vous avez atteint votre limite mensuelle de
+                traduction de documents. (<em>${period}</em>).
+                Passez à un forfait supérieur pour traduire davantage de documents.
+            </dl-bind>
+            <dl-bind name='submitText'>
+                Passer à un forfait supérieur
+            </dl-bind>
+        </dl-node>
+    </template>
+
+    <template dl-template='docTrans_quota_exceeded_popup--team_member'>
+        <dl-node type='docTrans__generic_confirmation_popup' bind='isOpen, isRemoved, doClose, doSubmit: $0.doClose'
+            dl-attr='placeholderText: $0'>
+            <dl-bind name='header'>
+                Vous avez atteint votre limite de traduction de documents
+            </dl-bind>
+            <dl-bind name='contentText'>
+                Vous ne pouvez plus traduire de documents pour le moment car vous avez atteint votre limite mensuelle de
+                traduction de documents. (<em>${period}</em>).
+                Contactez l'administrateur de comptes de votre équipe pour traduire davantage de documents.
+                (Équipe : <em>${teamName}</em>)
+            </dl-bind>
+            <dl-bind name='cancelText'></dl-bind>
+            <dl-bind name='submitText'>Revenir au Traducteur</dl-bind>
+        </dl-node>
+    </template>
+
+    <template dl-template='docTrans_quota_exceeded_popup--enterprise_user'>
+        <dl-node type='docTrans__generic_confirmation_popup' bind='isOpen, isRemoved, doClose, doSubmit: $0.doClose'
+            dl-attr='placeholderText: $0'>
+            <dl-bind name='header'>
+                Vous avez atteint votre limite de traduction de documents
+            </dl-bind>
+            <dl-bind name='contentText'>
+                Vous ne pouvez pas traduire de documents supplémentaires pour le moment car votre limite mensuelle de
+                traduction de documents est atteinte (<em>${period}</em>).
+            </dl-bind>
+            <dl-bind name='cancelText'></dl-bind>
+            <dl-bind name='submitText'>Revenir au Traducteur</dl-bind>
+        </dl-node>
+    </template>
+
+    <template dl-template='docTrans_document__target--quota_reached_team_member'>
+        <div>
+            <div class='docTrans_document__quota_error_text' dl-attr='placeholderText: $0'>
+                Impossible de traduire les documents pour l'instant.
+                La limite mensuelle de traduction de documents est atteinte (${period}).
+            </div>
+            <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doCancel'>Revenir au
+                Traducteur</button>
+        </div>
+    </template>
+
+    <template dl-template='docTrans_document__target--quota_reached'>
+        <div>
+            <div class='docTrans_document__quota_error_text' dl-attr='placeholderText: $0'>
+                Impossible de traduire des documents pour le moment.
+                La limite mensuelle de traduction de documents est atteinte (${period}).
+                <a href='/pro-account.html?page=category_plan'> Prenez un forfait supérieur pour augmenter le nombre de
+                    documents que vous pouvez traduire. </a>
+            </div>
+            <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doCancel'>Revenir au
+                Traducteur</button>
+        </div>
+    </template>
+
+    <template dl-template='docTrans_drop_target_overlay'>
+        <div class='docTrans_drop_target_overlay'
+            dl-attr='_init: $0.initDropTarget, class{docTrans_drop_target_overlay--active}: $0.hoverDropArea'>
+            <div class="docTrans_drop_target__desc">
+                <div class='dl_visible_pro_only'>Déposez ici le fichier .docx, .pptx ou .txt à traduire.</div>
+                <div class='dl_visible_free_only'>Déposez ici le fichier .docx ou .pptx à traduire.</div>
+            </div>
+        </div>
+    </template>
+
+
+    <template dl-template='docTrans_drop_target_overlay_not_available_beta'>
+        <div class='docTrans_drop_target_overlay docTrans_drop_target_overlay_failure'>
+            <div class="docTrans_drop_target__desc">
+                Les traductions de documents ne sont pas encore offertes sur beta.deepl.com. </div>
+        </div>
+    </template>
+
+    <!-- DF-1206: no need to have a element-wide wrapper since the docTrans_usage_info is re-placed into a lmt--doc which is already in a element-wide wrapper -->
+    <template dl-template='docTrans_usage_info'>
+        <div dl-attr='placeholderText: $0' class='docTrans_usage_info'>
+            <div>
+                <h2>Vue d'ensemble des documents traduits</h2>
+                <p>&#x25cf;&nbsp;&nbsp;Période : <span dl-attr='content: $0.period'></span></p>
+                <p dl-attr='class{docTrans_usage_info__entry--critical}: $0.userQuotaReached'>
+                    &#x25cf;&nbsp;&nbsp;Traductions de documents : ${userDocuments}</p>
+                <p
+                    dl-attr='isVisible: $0.teamDocuments, class{docTrans_usage_info__entry--critical}: $0.teamQuotaReached'>
+                    &#x25cf;&nbsp;&nbsp;Traductions de documents (équipe) : ${teamDocuments}</p>
+            </div>
+        </div>
+    </template>
+
+
+    <script>
+        M.register('docTrans_texts', {
+            'docTrans/notes.oleObjects': "Ce document contient des \u00e9l\u00e9ments non traduits",
+            'docTrans/notes.maxCharactersExceeded': "Le document est trop volumineux pour la version gratuite de DeepL Traducteur. Il n'a \u00e9t\u00e9 traduit que partiellement.",
+            'docTrans/notes.errorsEncountered': "Des probl\u00e8mes sont survenus lors du traitement de ce document. Veuillez en v\u00e9rifier le contenu.",
+            'docTrans/notes.validationFailed': "Des probl\u00e8mes sont survenus lors du traitement de ce document. Veuillez en v\u00e9rifier le contenu.",
+            'docTrans/error.languages_equal': "La langue d\u00e9tect\u00e9e pour le document est identique \u00e0 la langue cible.",
+            'docTrans/error.too_large_free': "Votre fichier est trop volumineux. Abonnez-vous \u00e0 DeepL Pro pour traduire des fichiers de plus grande taille.",
+            'docTrans/error.too_large_pro': "Votre fichier est trop volumineux. Seuls les fichiers de ${size}&nbsp;Mo max. sont accept\u00e9s.",
+            'docTrans/error.format_not_supported': "Ce type de fichier n'est pas accept\u00e9.",
+            'docTrans/error.currently_unavailable': "Le service de traduction de documents est momentan\u00e9ment indisponible. Veuillez r\u00e9essayer plus tard.",
+            'docTrans/error.blocked': "Vous ne pouvez plus traduire de documents. Abonnez-vous \u00e0 DeepL Pro pour en traduire davantage.",
+            'docTrans/dragOverlay.invalidHint': "Un seul fichier (.docx ou .pptx) peut \u00eatre traduit \u00e0 la fois.",
+            'docTrans/dragOverlay.invalidHint--pro': "Un seul fichier (.docx, .pptx ou .txt) peut \u00eatre traduit \u00e0 la fois.",
+            'docTrans/error.title': "Erreur",
+            'docTrans/error.session_invalid_or_expired.text': "Votre session est expir\u00e9e.",
+            'docTrans/error.session_invalid_or_expired.text.helper': "<a href='#login' class=\"banner__login-link\">Veuillez vous reconnecter<\/a> ou r\u00e9essayer ult\u00e9rieurement.",
+            'docTrans/error.file_too_large_free.text': "Fichier trop volumineux pour la version gratuite",
+            'docTrans/error.file_too_large_free.helper': "Votre fichier fait <strong>\u202a${fileSize}\u202c&nbsp;Mo<\/strong>, il d\u00e9passe donc la limite des <strong>\u202a${fileSizeLimit}\u202c&nbsp;Mo<\/strong> fix\u00e9e pour la version gratuite du traducteur.",
+            'docTrans/error.file_too_large_free.trial_promotion': "<a href=\"\/pro?cta=header-prices\" class=\"target__trial-promotion\">Essayez DeepL Pro gratuitement pendant 30&nbsp;jours<\/a> si vous souhaitez traduire des fichiers allant jusqu'\u00e0 <strong>${proFileSizeLimit}\u202c&nbsp;Mo\/strong>.",
+            'docTrans/error.file_too_large_pro.text': "Fichier trop volumineux",
+            'docTrans/error.file_too_large_pro.helper': "Votre fichier fait <strong>\u202a${fileSize}\u202c&nbsp;Mo<\/strong>, il d\u00e9passe donc la limite des <strong>\u202a${fileSizeLimit}\u202c&nbsp;Mo<\/strong> fix\u00e9e pour les fichiers de type \u202a${fileType}\u202c.",
+            'docTrans/error.languages_are_equal.text': "Votre document semble \u00eatre d\u00e9j\u00e0 en ${detectedLangName}.",
+            'docTrans/error.languages_are_equal.helper': "Veuillez s\u00e9lectionner une autre langue cible :",
+            'docTrans/error.invalid_or_missing_file_data.text': "Fichier illisible",
+            'docTrans/error.invalid_or_missing_file_data.helper': "Assurez-vous que votre fichier n'est pas prot\u00e9g\u00e9 par un mot de passe puis r\u00e9essayez, ou consultez notre <a href='https:\/\/support.deepl.com' class=\"target__help-center-link\">Centre d'assistance<\/a>.",
+            'docTrans/error.invalid_source_language.text': "Langue source non prise en charge",
+            'docTrans/error.invalid_source_language.helper_one': "Votre document contient une langue que nous ne prenons pas encore en charge. ",
+            'docTrans/error.invalid_source_language.helper_two': "Notre \u00e9quipe fait son possible afin d'ajouter de nouvelles langues \u00e0 celles d\u00e9j\u00e0 propos\u00e9es par DeepL.",
+            'docTrans/error.too_large': "Votre document est trop volumineux et ne peut \u00eatre traduit.",
+            'docTrans/error.upload_noConnection': "Il y a un probl\u00e8me de connexion \u00e0 nos serveurs. Veuillez r\u00e9essayer.",
+            'docTrans/error.upload_fileNotAccepted': "Le fichier que vous avez d\u00e9pos\u00e9 semble \u00eatre corrompu. Nous n'avons pas pu le traduire.",
+            'docTrans/error.unsupported_source_language': "Votre document contient une langue que nous ne prenons pas en charge actuellement. Notre \u00e9quipe fait son possible afin d'ajouter de nouvelles langues au service de traduction de documents.",
+            'docTrans/documentReady.continueButton.another': "Traduire un autre document",
+            'docTrans/documentReady.subscribeToEditNote': "Abonnez-vous \u00e0 DeepL Pro pour modifier vos documents",
+            'docTrans/document.cancelButton': "Annuler",
+            'docTrans/document.selectTargetLanguage': "S\u00e9lectionnez la langue cible :",
+            'docTrans/document.status_waiting': "En attente de place libre sur notre serveur...",
+            'docTrans/document.status_error': "Votre document n'a pas pu \u00eatre traduit.",
+            'docTrans/document.status_translating': "Traduction vers <em>${translateIntoLang}<\/em>...",
+            'docTrans/document.status_ready': "Le fichier peut \u00eatre t\u00e9l\u00e9charg\u00e9",
+            'docTrans/document.status_deleted': "Votre document a \u00e9t\u00e9 effac\u00e9 de notre serveur.",
+            'docTrans/document.status_uploading': "T\u00e9l\u00e9chargement...",
+            'docTrans/documentReady.downloadButton': "T\u00e9l\u00e9charger",
+            'docTrans/documentReady.proApproachingIncludedLimit': "Vous avez presque atteint votre limite de caract\u00e8res mensuelle.",
+            'docTrans/documentReady.proApproachingIncludedLimitLink': "Contr\u00f4lez votre consommation ici.",
+            'docTrans/documentReady.translationDownloaded': "${translation} t\u00e9l\u00e9charg\u00e9e",
+            'docTrans/documentReady.translationReady': "${translation} effectu\u00e9e",
+            'docTrans/document.approxMinutesRemaining': "env. ${minutes} minute(s) d'attente",
+            'docTrans/document.bePatient': "Votre fichier est en cours de traduction. Merci de votre patience.",
+            'docTrans/document.almostFinished': "env. 1 minute d'attente",
+            'docTrans/document.fileSize_kb': "(Taille du fichier : $0 kB)",
+            'docTrans/documentFeedback.disclaimer': "Veuillez noter que ce formulaire a \u00e9t\u00e9 cr\u00e9\u00e9 uniquement afin de vous permettre de signaler des probl\u00e8mes techniques li\u00e9s \u00e0 la traduction de vos documents. Si vous rencontrez d'autres types de probl\u00e8mes, nous vous recommandons de contacter l'<a href=\"https:\/\/www.DeepL.com\/support\">assistance technique de DeepL<\/a>.",
+            'docTrans/documentFeedback.headline': " Des probl\u00e8mes pour ouvrir le document ?",
+            'docTrans/documentFeedback.response': "Merci pour vos remarques.",
+            'docTrans/documentFeedback.submit': "Envoyer vos remarques",
+            'docTrans/documentFeedback.text': "Veuillez nous d\u00e9crire le probl\u00e8me :",
+            'docTrans/translator.uploadButton_2': "en ${translateIntoLang}",
+            'docTrans/translator.docTransTab.text': "Traduire du texte",
+            'docTrans/translator.docTransTab.document': "Traduire des documents",
+            'docTrans/translator.docTransTab.document.docx.pptx': "Traduire des fichiers .docx et .pptx",
+            'docTrans/translator.docTransTab.countOfLanguages': "26 langues",
+            'docTrans/translator.docTransTab.translateFiles': "Traduire des fichiers",
+            'docTrans/translator.docTransTab.translateFileTypes': ".docx et .pptx",
+            'docTrans/translator.docTransTab.translateFileTypes.pro': ".docx, .pptx, .txt, .html",
+            'docTrans/translator.docTrans.cancelDialogTitle': "Voulez-vous annuler la traduction du document en cours ?",
+            'docTrans/translator.docTrans.cancelDialogConfirmButton': "Annuler",
+            'docTrans/translator.docTrans.cancelDialogCancelButton': "Non, poursuivre la traduction du document",
+            'docTrans/translator.docTrans.fileUploadButton': "S\u00e9lectionner un fichier",
+            'docTrans/translator.docTrans.docFileSizeAd.headline': "Traduisez des fichiers volumineux en un instant gr\u00e2ce&nbsp;\u00e0 DeepL&nbsp;Pro",
+            'docTrans/translator.docTrans.docFileSizeAd.subline': "Votre fichier d\u00e9passe la taille limite admise dans la version gratuite du Traducteur. Abonnez-vous \u00e0 DeepL&nbsp;Pro pour traduire des fichiers volumineux instantan\u00e9ment.",
+            'docTrans/translator.docTrans.docFileSizeAd.cta.learnMore': "En savoir plus",
+            'docTrans/translator.docTrans.fileSizeLimitExceeded.free': "Votre fichier fait <strong>${fileSize} Mo<\/strong>, il d\u00e9passe donc la limite des <strong>5 Mo<\/strong> fix\u00e9e dans la version gratuite du traducteur. Abonnez-vous \u00e0 <a href=\"\/pro\">DeepL Pro<\/a> pour traduire des fichiers allant jusqu'\u00e0 <strong>10 Mo<\/strong>.",
+            'docTrans/translator.docTrans.fileSizeLimitExceeded.pro': "Votre fichier d\u00e9passe la limite des <strong>10 Mo<\/strong>.",
+            'docTrans/translator.docTrans.proAd.cta.freeTrial': "Commencer l'essai gratuit",
+            'docTrans/translator.docTrans.proAd.filesLimit.headline': "Abonnez-vous \u00e0 DeepL Pro pour traduire davantage de documents",
+            'docTrans/translator.docTrans.proAd.filesLimit.subline': "Vous avez atteint la limite de traductions de documents autoris\u00e9e avec la version gratuite du traducteur. Traduisez davantage de fichiers et modifiez-les \u00e0 votre guise en vous abonnant \u00e0 DeepL&nbsp;Pro.",
+            'docTrans/translator.docTrans.proAd.filesLimit.counter.initial': "Vous pouvez traduire ${maxDocuments} documents gratuitement. <a href=\"javascript:window.handleDocTransProLinkClick('initial')\">Abonnez-vous \u00e0 DeepL&nbsp;Pro<\/a> pour en traduire davantage et les modifier comme bon vous semble.",
+            'docTrans/translator.docTrans.proAd.filesLimit.counter.progress': "Vous avez d\u00e9j\u00e0 traduit ${currentDocuments}\/${maxDocuments} documents gratuitement. <a href=\"javascript:window.handleDocTransProLinkClick('progress')\">Abonnez-vous \u00e0 DeepL&nbsp;Pro<\/a> pour en traduire davantage et les modifier comme bon vous semble.",
+            'docTrans/translation.en': "Traduction en anglais",
+            'docTrans/translation.de': "Traduction en allemand",
+            'docTrans/translation.fr': "Traduction en fran\u00e7ais",
+            'docTrans/translation.es': "Traduction en espagnol",
+            'docTrans/translation.it': "Traduction en italien",
+            'docTrans/translation.nl': "Traduction en n\u00e9erlandais",
+            'docTrans/translation.pl': "Traduction en polonais",
+            'docTrans/translation.ru': "Traduction en russe",
+            'docTrans/translation.pt': "Traduction en portugais",
+            'docTrans/translation.ja': "Traduction en japonais",
+            'docTrans/translation.zh': "Traduction en chinois",
+            'docTrans/translation.bg': "Traduction en bulgare",
+            'docTrans/translation.cs': "Traduction en tch\u00e8que",
+            'docTrans/translation.da': "Traduction en danois",
+            'docTrans/translation.et': "Traduction en estonien",
+            'docTrans/translation.fi': "Traduction en finnois",
+            'docTrans/translation.el': "Traduction en grec",
+            'docTrans/translation.hu': "Traduction en hongrois",
+            'docTrans/translation.lv': "Traduction en letton",
+            'docTrans/translation.lt': "Traduction en lituanien",
+            'docTrans/translation.ro': "Traduction en roumain",
+            'docTrans/translation.sk': "Traduction en slovaque",
+            'docTrans/translation.sl': "Traduction en slov\u00e8ne",
+            'docTrans/translation.sv': "Traduction en su\u00e9dois",
+            'docTrans/translateIntoLang.en': "l'anglais",
+            'docTrans/translateIntoLang.de': "l'allemand",
+            'docTrans/translateIntoLang.fr': "le fran\u00e7ais",
+            'docTrans/translateIntoLang.es': "l'espagnol",
+            'docTrans/translateIntoLang.it': "l'italien",
+            'docTrans/translateIntoLang.nl': "le n\u00e9erlandais",
+            'docTrans/translateIntoLang.pl': "le polonais",
+            'docTrans/translateIntoLang.ru': "le russe",
+            'docTrans/translateIntoLang.pt': "le portugais",
+            'docTrans/translateIntoLang.pt-BR': "le portugais (br\u00e9silien)",
+            'docTrans/translateIntoLang.pt-PT': "le portugais",
+            'docTrans/translateIntoLang.ja': "le japonais",
+            'docTrans/translateIntoLang.zh': "le chinois",
+            'docTrans/translateIntoLang.bg': "le bulgare",
+            'docTrans/translateIntoLang.cs': "le tch\u00e8que",
+            'docTrans/translateIntoLang.da': "le danois",
+            'docTrans/translateIntoLang.et': "l'estonien",
+            'docTrans/translateIntoLang.fi': "le finnois",
+            'docTrans/translateIntoLang.el': "le grec",
+            'docTrans/translateIntoLang.hu': "le hongrois",
+            'docTrans/translateIntoLang.lv': "le letton",
+            'docTrans/translateIntoLang.lt': "le lituanien",
+            'docTrans/translateIntoLang.ro': "le roumain",
+            'docTrans/translateIntoLang.sk': "le slovaque",
+            'docTrans/translateIntoLang.sl': "le slov\u00e8ne",
+            'docTrans/translateIntoLang.sv': "le su\u00e9dois",
+            'docTrans/document.chooseDifferentLangHint': "Votre document semble \u00eatre d\u00e9j\u00e0 en <em>${detectedLangName}<\/em>. Veuillez s\u00e9lectionner une autre langue cible :",
+            'docTrans/detectedLangName.en': "anglais",
+            'docTrans/detectedLangName.de': "allemand",
+            'docTrans/detectedLangName.fr': "fran\u00e7ais",
+            'docTrans/detectedLangName.es': "espagnol",
+            'docTrans/detectedLangName.it': "italien",
+            'docTrans/detectedLangName.nl': "n\u00e9erlandais",
+            'docTrans/detectedLangName.pl': "polonais",
+            'docTrans/detectedLangName.ru': "russe",
+            'docTrans/detectedLangName.pt': "portugais",
+            'docTrans/detectedLangName.ja': "japonais",
+            'docTrans/detectedLangName.zh': "chinois",
+            'docTrans/detectedLangName.bg': "bulgare",
+            'docTrans/detectedLangName.cs': "tch\u00e8que",
+            'docTrans/detectedLangName.da': "danois",
+            'docTrans/detectedLangName.et': "estonien",
+            'docTrans/detectedLangName.fi': "finnois",
+            'docTrans/detectedLangName.el': "grec",
+            'docTrans/detectedLangName.hu': "hongrois",
+            'docTrans/detectedLangName.lv': "letton",
+            'docTrans/detectedLangName.lt': "lituanien",
+            'docTrans/detectedLangName.ro': "roumain",
+            'docTrans/detectedLangName.sk': "slovaque",
+            'docTrans/detectedLangName.sl': "slov\u00e8ne",
+            'docTrans/detectedLangName.sv': "su\u00e9dois",
+            'translator/anyLanguage': "langue d\u00e9tect\u00e9e automatiquement",
+            'translator/anyLanguageWithoutDetect': "D\u00e9tection automatique",
+            'translator/selectEnglish': "anglais",
+            'translator/selectGerman': "allemand",
+            'translator/selectFrench': "fran\u00e7ais",
+            'translator/selectSpanish': "espagnol",
+            'translator/selectItalian': "italien",
+            'translator/selectDutch': "n\u00e9erlandais",
+            'translator/selectPolish': "polonais",
+            'translator/selectRussian': "russe",
+            'translator/selectPortuguese': "portugais",
+            'translator/selectLang.target.en': "anglais",
+            'translator/selectLang.target.en.en-US': "anglais (am\u00e9ricain)",
+            'translator/selectLang.target.en.en-GB': "anglais (britannique)",
+            'translator/selectLang.target.de': "allemand",
+            'translator/selectLang.target.fr': "fran\u00e7ais",
+            'translator/selectLang.target.es': "espagnol",
+            'translator/selectLang.target.pt': "portugais",
+            'translator/selectLang.target.pt.pt-PT': "portugais",
+            'translator/selectLang.target.pt.pt-BR': "portugais (br\u00e9silien)",
+            'translator/selectLang.target.it': "italien",
+            'translator/selectLang.target.nl': "n\u00e9erlandais",
+            'translator/selectLang.target.pl': "polonais",
+            'translator/selectLang.target.ru': "russe",
+            'translator/selectLang.target.ja': "japonais",
+            'translator/selectLang.target.zh': "chinois (simplifi\u00e9)",
+            'translator/selectLang.target.bg': "bulgare",
+            'translator/selectLang.target.cs': "tch\u00e8que",
+            'translator/selectLang.target.da': "danois",
+            'translator/selectLang.target.et': "estonien",
+            'translator/selectLang.target.fi': "finnois",
+            'translator/selectLang.target.el': "grec",
+            'translator/selectLang.target.hu': "hongrois",
+            'translator/selectLang.target.lv': "letton",
+            'translator/selectLang.target.lt': "lituanien",
+            'translator/selectLang.target.ro': "roumain",
+            'translator/selectLang.target.sk': "slovaque",
+            'translator/selectLang.target.sl': "slov\u00e8ne",
+            'translator/selectLang.target.sv': "su\u00e9dois",
+            'docTrans/documentError.continueButton': "Revenir au Traducteur",
+        });
+        M.define('docTrans_config', ['queryVars'], function (queryVars) {
+            return {
+                'fileSize_freeDOCX': 5,
+                'fileSize_freePPTX': 5,
+                'fileSize_proDOCX': 10,
+                'fileSize_proPPTX': 10,
+                'fileSize_proTXT': 1,
+                'fileSize_proHTML': 5,
+                'backendUrl': queryVars['docTransBackend'] || "https://backend.deepl.com/documentTranslation",
+            };
+        });
+    </script>
+    <script src='https://static.deepl.com/js/translatorFeatures.min.$9da1b0.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://static.deepl.com/css/shariff.$7c2ad6.css" />
+    <script src='https://static.deepl.com/js/ext/shariff.min.$adfca3.js'></script>
+    <script>
+        M.define('Shariff', [], function () { return Shariff });
+    </script>
+
+
+    <script>
+        M.requireAsync([
+            'LMT_InitializedWebTranslatorInstance',
+            'dlReleaseGroups'
+        ], function (webTranslator, dlReleaseGroups) {
+            webTranslator.features.apply('/translator/common/busyIndicator')
+        })
+    </script>
+
+<div id='data' data-numberQueriesSoFar='0' data-lingueeEncoding='latin-9' data-sourceIsLang1='0' data-lang1='ES'
+    data-lang2='EN' data-mainFlag='gb' data-baseURL='/english-spanish' data-query='perhaps'
+    data-correctSpellingOfQuery='perhaps' data-numberPhrases='0' data-numberSentences='0' data-sourceLang='EN'
+    data-sourceFlag='gb' data-targetLang='ES'></div>
+<div class='innercontent'>
+
+    <!-- DeepL Search Banner -->
+
+    <div class='l_deepl_ad_container wide_in_main' style='display:none'>
+        <div class='l_deepl_ad__bg'>
+        </div>
+        <div class='l_deepl_ad__content_container'>
+            <div class='l_deepl_ad_headercontainer'>
+                <div class='l_deepl_ad_header'>Utilisez DeepL Traducteur pour traduire instantanément textes et
+                    documents</div>
+                <div class='l_deepl_ad_header__mobile'>Essayez DeepL Traducteur</div>
+            </div>
+            <div class='l_deepl_ad_bodycontainer'>
+                <div class='lmt__textarea_separator lmt__textarea_separator--left'>
+                    <div class='lmt__textarea_separator__vertical_line'></div>
+                    <div class='lmt__textarea_separator__arrow'></div>
+                    <div class='lmt__textarea_separator__border_inner'></div>
+                    <div class='lmt__textarea_separator__border_outer'></div>
+                    <div class='lmt__textarea_separator__busy'></div>
+                </div>
+                <div class='l_deepl_ad__querytext lmt__textarea'>perhaps</div>
+                <div class='l_deepl_ad__copyListContainer'>
+                    <ul>
+                        <li>Traduction en temps réel</li>
+                        <li>Meilleure qualité au monde</li>
+                        <li>Documents chargeables en «&nbsp;glisser-déposer&nbsp;»</li>
+                    </ul>
+                    <div href='https://deepl.com' class='l_deepl_ad__ctaButton'>Essayer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='dictionary'>
+        <h1 class='dict_headline_for_0 bothsides wide_in_main'>
+            <div class='openTriangle'> &#9662;</div>Dictionnaire anglais-espagnol
+        </h1>
+        <div class='isMainTerm' data-source-lang='EN'>
+            <div class='exact'>
+                <div class='lemma featured' wt='400'>
+                    <div>
+                        <h2 class='line lemma_desc' lid='EN:perhaps29833'><span class='tag_lemma'><a class='dictLink'
+                                    rel='nofollow' href='/anglais-espagnol/traduction/perhaps.html'>perhaps</a> <a
+                                    id='EN_US/48/48643de4e709ff78a8f7ce1ba36878b2-400' class='audio'
+                                    onclick='playSound(this,"EN_US/48/48643de4e709ff78a8f7ce1ba36878b2-400","anglais américain","EN_UK/48/48643de4e709ff78a8f7ce1ba36878b2-400","anglais britannique");'></a>
+                                <span class='tag_wordtype'>adverbe</span></span><span class='dash'>&mdash;</span></h2>
+                        <div class='lemma_content'>
+                            <div class='meaninggroup  sortablemg' gid='0'>
+                                <div class='translation_lines'>
+                                    <div class='translation sortablemg featured'>
+                                        <h3 class='translation_desc'><span class='tag_trans' bid='10000838620'
+                                                lid='ES:quiz#s9733'><a id='dictEntry10000838620'
+                                                    href='/espagnol-anglais/traduction/quiz%C3%A1s.html'
+                                                    class='dictLink featured'>quizás</a> <span class='tag_type'
+                                                    title='adverbe'>adv</span> <a
+                                                    id='ES_ES/70/70b925d8f3e96efff3c0be2ad9bdffe6-400' class='audio'
+                                                    onclick='playSound(this,"ES_ES/70/70b925d8f3e96efff3c0be2ad9bdffe6-400","espagnol");'></a><a
+                                                    class='expand_i'></a></span>
+                                            <!--tag_trans-->
+                                        </h3>
+                                        <!--translation_desc-->
+                                        <!-- editorial isFeatured 1 inType 0 allowFeatured 1 available: 0 -->
+                                    </div>
+                                    <div class='translation sortablemg featured'>
+                                        <h3 class='translation_desc'><span class='tag_trans' bid='10000838619'
+                                                lid='ES:tal#vez28746'><a id='dictEntry10000838619'
+                                                    href='/espagnol-anglais/traduction/tal+vez.html'
+                                                    class='dictLink featured'>tal vez</a> <span class='tag_type'
+                                                    title='adverbe'>adv</span> <a
+                                                    id='ES_ES/4f/4f0bd219acfdc3c378a5cf5a05c7d30e-400' class='audio'
+                                                    onclick='playSound(this,"ES_ES/4f/4f0bd219acfdc3c378a5cf5a05c7d30e-400","espagnol");'></a><a
+                                                    class='expand_i'></a></span>
+                                            <!--tag_trans-->
+                                        </h3>
+                                        <!--translation_desc-->
+                                        <!-- editorial isFeatured 1 inType 0 allowFeatured 1 available: 0 -->
+                                    </div>
+                                    <div class='translation sortablemg featured'>
+                                        <h3 class='translation_desc'><span class='tag_trans' bid='10000838621'
+                                                lid='ES:quiz#3042'><a id='dictEntry10000838621'
+                                                    href='/espagnol-anglais/traduction/quiz%C3%A1.html'
+                                                    class='dictLink featured'>quizá</a> <span class='tag_type'
+                                                    title='adverbe'>adv</span> <a
+                                                    id='ES_ES/e4/e4180b5ffa5f2743d3984f786ac916b8-400' class='audio'
+                                                    onclick='playSound(this,"ES_ES/e4/e4180b5ffa5f2743d3984f786ac916b8-400","espagnol");'></a><a
+                                                    class='expand_i'></a></span>
+                                            <!--tag_trans-->
+                                        </h3>
+                                        <!--translation_desc-->
+                                        <!-- editorial isFeatured 1 inType 0 allowFeatured 1 available: 1 -->
+                                        <div class='example_lines'>
+                                            <div class='example line ' sid='98219'><span class='tag_e'><span
+                                                        class='tag_s'>Perhaps one day we will be able to travel to
+                                                        another planet.</span> <span
+                                                        class='dash'>&mdash;</span>&nbsp;<span class='tag_t'>Quizá algún
+                                                        día podremos viajar a otro planeta.</span><span
+                                                        class='tag_e_end'></span></span></div>
+                                        </div>
+                                    </div>
+                                    <div class='translation sortablemg featured'>
+                                        <h3 class='translation_desc'><span class='tag_trans' bid='10000838622'
+                                                lid='ES:a#lo#mejor53503'><a id='dictEntry10000838622'
+                                                    href='/espagnol-anglais/traduction/a+lo+mejor.html'
+                                                    class='dictLink featured'>a lo mejor</a> <span class='tag_type'
+                                                    title='adverbe'>adv</span> <a
+                                                    id='ES_ES/3d/3d4444d1709b8c1846ff892d0fba6d96-400' class='audio'
+                                                    onclick='playSound(this,"ES_ES/3d/3d4444d1709b8c1846ff892d0fba6d96-400","espagnol");'></a><a
+                                                    class='expand_i'></a></span>
+                                            <!--tag_trans-->
+                                        </h3>
+                                        <!--translation_desc-->
+                                        <!-- editorial isFeatured 1 inType 0 allowFeatured 1 available: 1 -->
+                                        <div class='example_lines'>
+                                            <div class='example line ' sid='83796'><span class='tag_e'><span
+                                                        class='tag_s'>Perhaps I will go to France this summer.</span>
+                                                    <span class='dash'>&mdash;</span>&nbsp;<span class='tag_t'>A lo
+                                                        mejor voy a Francia este verano.</span><span
+                                                        class='tag_e_end'></span></span></div>
+                                        </div>
+                                    </div>
+                                    <div class='translation sortablemg featured'>
+                                        <h3 class='translation_desc'><span class='tag_trans' bid='10007491530'
+                                                lid='ES:lo#mismo17674'><a id='dictEntry10007491530'
+                                                    href='/espagnol-anglais/traduction/lo+mismo.html'
+                                                    class='dictLink featured'>lo mismo</a> <span class='tag_type'
+                                                    title='adverbe'>adv</span> <a
+                                                    id='ES_ES/35/35e28bd1529a7412062d352e9562d855-0' class='audio'
+                                                    onclick='playSound(this,"ES_ES/35/35e28bd1529a7412062d352e9562d855-0","espagnol");'></a></span>
+                                            <!--tag_trans-->
+                                        </h3>
+                                        <!--translation_desc-->
+                                        <!-- editorial isFeatured 1 inType 0 allowFeatured 1 available: 0 -->
+                                    </div>
+                                    <div class='translation_group'>
+                                        <div class='line group_line translation_group_line'><span
+                                                class='notascommon'>plus rare&nbsp;:</span>
+                                            <div class='translation sortablemg translation_first'>
+                                                <div class='translation_desc'><span class='tag_trans' bid='10007491262'
+                                                        lid='ES:acaso59511'><a id='dictEntry10007491262'
+                                                            href='/espagnol-anglais/traduction/acaso.html'
+                                                            class='dictLink'>acaso</a> <span class='tag_type'
+                                                            title='adverbe'>adv</span> <a
+                                                            id='ES_ES/13/134ad1df20c63eb396c201cbdac7f720-400'
+                                                            class='audio'
+                                                            onclick='playSound(this,"ES_ES/13/134ad1df20c63eb396c201cbdac7f720-400","espagnol");'></a><a
+                                                            class='expand_i'></a></span>
+                                                    <!--tag_trans-->
+                                                </div>
+                                                <!--translation_desc-->
+                                                <!-- editorial isFeatured 0 inType 0 allowFeatured 1 available: 0 -->
+                                                <span class='sep'>&middot;</span>
+                                            </div>
+                                            <div class='translation sortablemg'>
+                                                <div class='translation_desc'><span class='tag_trans' bid='10007491446'
+                                                        lid='ES:igual51406'><a id='dictEntry10007491446'
+                                                            href='/espagnol-anglais/traduction/igual.html'
+                                                            class='dictLink'>igual</a> <span class='tag_type'
+                                                            title='adverbe'>adv</span> <span class='tag_usage'
+                                                            title='familier'>[fam.]</span> <a
+                                                            id='ES_ES/92/922fb303ea4204ee681417be98dcd350-0'
+                                                            class='audio'
+                                                            onclick='playSound(this,"ES_ES/92/922fb303ea4204ee681417be98dcd350-0","espagnol");'></a><a
+                                                            class='expand_i'></a></span>
+                                                    <!--tag_trans-->
+                                                </div>
+                                                <!--translation_desc-->
+                                                <!-- editorial isFeatured 0 inType 0 allowFeatured 1 available: 0 -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--translation_lines-->
+                            </div>
+                            <!--meaninggroup-->
+                        </div>
+                        <!--lemma_content-->
+                    </div>
+                </div>
+                <!--lemma-->
+            </div>
+            <!--exact-->
+            <div class='copyrightLineOuter'>
+                <div class='copyrightLine'>&copy; Dictionnaire Linguee, 2021</div>
+            </div>
+        </div>
+    </div>
+    <!--dictionary-->
+</div>
+<!--innercontent-->
+<!-- 2021-Oct-12 10:19:42 -->
+
+
+</body>
+
+</html>
