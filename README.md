@@ -10,9 +10,9 @@ Partie I : Juin 2021 à Septembre 2021 :
 
 
 Partie II : Septembre 2021 à Novembre 2021 :
-- XML
-- HTML / CSS
 - C# ASP.NET
+- HTML / CSS
+- XML
 
 
 Partie III : Novembre 2021 à Janvier 2022
