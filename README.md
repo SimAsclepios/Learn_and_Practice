@@ -5,14 +5,14 @@ repertoriés par langage de programmation.
 
 --------------------------------------------------------------------
 
-Partie I : Juin 2021 à Septembre 2021 :
+Partie I : Juin 2021 à Septembre 2021
 - Java SE
 
 
-Partie II : Septembre 2021 à Novembre 2021 :
-- XML
-- HTML / CSS
+Partie II : Septembre 2021 à Novembre 2021
 - C# ASP.NET
+- HTML / CSS
+- XML
 
 
 Partie III : Novembre 2021 à Janvier 2022
@@ -22,6 +22,9 @@ Partie III : Novembre 2021 à Janvier 2022
 - Bootstrap
 - Ajax
 
+
+Partie IV : Janvier 2022 à Mai 2022
+- (en cours)
 
 ***************************************************************************
 
