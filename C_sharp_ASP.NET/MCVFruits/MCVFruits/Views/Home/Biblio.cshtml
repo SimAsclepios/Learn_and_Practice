@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListeClients</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Nom</th>
+            <th>Autheur</th>
+            <th>Année</th>
+            <!--  <th>Quantité</th> -->
+        </tr>
+        @foreach (var item in ViewData["biblio"] as List<MCVFruits.Models.Livre>)
+        {
+            <tr>
+                <td>@item.Nom</td>
+                <td>@item.Autheur</td>
+                <td>@item.Annee</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <br />
+
+    <form>
+
+
+
+
+        <div>
+            <label for="Remettre">Remettre : </label>
+            <input type="radio" id="Remettre" name="Remettre" value="Remettre" />
+            <label for="Prendre">Prendre : </label>
+            <input type="radio" id="Prendre" name="Prendre" value="Prendre" checked />
+        </div>
+        <div class="form-group">
+            <label for="Nom">Nom : </label>
+            <input type="text" id="Nom" name="Nom" placeholder="Titre du livre ..." />
+        </div>
+        <div class="form-group">
+            <label for="Autheur">Autheur : </label>
+            <input type="text" id="Autheur" name="Autheur" />
+        </div>
+        <div class="form-group">
+            <label for="Annee">Annee : </label>
+            <input type="text" id="Annee" name="Annee" />
+        </div>
+
+        <div>
+            <input type="submit" value="Valider">
+            <input type="reset" value="Effacer">
+        </div>
+
+
+
+
+    </form>
+
+</body>
+</html>

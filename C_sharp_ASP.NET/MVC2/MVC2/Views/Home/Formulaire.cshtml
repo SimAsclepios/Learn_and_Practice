@@ -1,0 +1,78 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires HTML 5</title>
+</head>
+<body>
+    <h1>Formulaires HTML 5</h1>
+
+    <form>
+
+
+
+
+        <div>
+            <label for="masculin">Mr : </label>
+            <input type="radio" id="masculin" name="civilite" value="Masculin" />
+            <label for="feminin">Mme : </label>
+            <input type="radio" id="feminin" name="civilite" value="Feminin" checked />
+        </div>
+        <div class="form-group">
+            <label for="nom">Nom : </label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom svp ..." />
+        </div>
+        <div class="form-group">
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email" />
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de Passe : </label>
+            <input type="password" id="password" name="password" />
+        </div>
+        <div>
+            <label for="picture">Photo de profil : </label>
+            <input type="file" id="picture" name="picture" accept="img.pnj" />
+        </div>
+
+        <div>
+            <div>
+
+                <label for="">Description : </label>
+            </div>
+            <textarea name="bio" id="" cols="30" rows="10" placeholder="Tapez votre description ..."></textarea>
+        </div>
+
+        <div>
+            <select name="pays" id="country">
+                <option value="france">France</option>
+                <option value="allemagne">Allemagne</option>
+                <option value="espagne">Espagne</option>
+                <option value="italie">Italie</option>
+            </select>
+        </div>
+        <div>
+            <div>Sport:</div>
+            <label for="course">Course : </label>
+            <input type="checkbox" id="course" name="course" value="course" />
+            <label for="handball">Handball : </label>
+            <input type="checkbox" id="handball" name="handball" value="handball" />
+
+        </div>
+
+        <div>
+            <input type="submit" value="Se connecter">
+            <input type="" value="Effacer">
+        </div>
+
+
+
+
+    </form>
+</body>
+</html>

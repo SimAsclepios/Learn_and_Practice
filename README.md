@@ -12,13 +12,15 @@ Partie I : Juin 2021 à Septembre 2021 :
 Partie II : Septembre 2021 à Novembre 2021 :
 - XML
 - HTML / CSS
-- C# ASP.NET Core MVC
+- C# ASP.NET
 
 
 Partie III : Novembre 2021 à Janvier 2022
 - Java EE
 - JavaScript
+- JQuery
 - Bootstrap
+- Ajax
 
 
 ***************************************************************************

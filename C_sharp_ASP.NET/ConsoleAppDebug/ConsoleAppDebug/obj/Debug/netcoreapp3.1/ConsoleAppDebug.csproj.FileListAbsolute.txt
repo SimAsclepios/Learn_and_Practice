@@ -1,0 +1,14 @@
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\bin\Debug\netcoreapp3.1\ConsoleAppDebug.exe
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\bin\Debug\netcoreapp3.1\ConsoleAppDebug.deps.json
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\bin\Debug\netcoreapp3.1\ConsoleAppDebug.runtimeconfig.json
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\bin\Debug\netcoreapp3.1\ConsoleAppDebug.runtimeconfig.dev.json
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\bin\Debug\netcoreapp3.1\ConsoleAppDebug.dll
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\bin\Debug\netcoreapp3.1\ConsoleAppDebug.pdb
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\obj\Debug\netcoreapp3.1\ConsoleAppDebug.csproj.AssemblyReference.cache
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\obj\Debug\netcoreapp3.1\ConsoleAppDebug.GeneratedMSBuildEditorConfig.editorconfig
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\obj\Debug\netcoreapp3.1\ConsoleAppDebug.AssemblyInfoInputs.cache
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\obj\Debug\netcoreapp3.1\ConsoleAppDebug.AssemblyInfo.cs
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\obj\Debug\netcoreapp3.1\ConsoleAppDebug.csproj.CoreCompileInputs.cache
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\obj\Debug\netcoreapp3.1\ConsoleAppDebug.dll
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\obj\Debug\netcoreapp3.1\ConsoleAppDebug.pdb
+C:\Developpement\WorkSpace\C_sharp\ConsoleAppDebug\ConsoleAppDebug\obj\Debug\netcoreapp3.1\ConsoleAppDebug.genruntimeconfig.cache

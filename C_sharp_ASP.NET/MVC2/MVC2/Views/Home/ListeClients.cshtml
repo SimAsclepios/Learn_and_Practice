@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListeClients</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Nom</th>
+            <th>Age</th>
+        </tr>
+        @foreach (var item in ViewData["Clients"] as List<FirstMVC.Models.Client>)
+        {
+            <tr>
+                <td>@item.Nom</td>
+                <td>@item.Age</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

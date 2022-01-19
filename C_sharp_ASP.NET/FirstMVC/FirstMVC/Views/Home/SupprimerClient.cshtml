@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SupprimerClient</title>
+</head>
+<body>
+    @if ((bool)ViewData["clientExist"])
+    {
+        <div>Le client @ViewData["Nom"] a bien été supprimé.</div>
+    }
+    else
+    {
+        <div>Le client @ViewData["Nom"] n'existe pas.</div>
+    }
+</body>
+</html>
