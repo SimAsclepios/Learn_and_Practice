@@ -12,15 +12,10 @@ Partie I : Juin 2021 à Septembre 2021
 Partie II : Septembre 2021 à Novembre 2021
 - C# ASP.NET
 - HTML / CSS
-- XML
 
 
 Partie III : Novembre 2021 à Janvier 2022
 - Java EE
-- JavaScript
-- JQuery
-- Bootstrap
-- Ajax
 
 
 Partie IV : Janvier 2022 à Mai 2022
@@ -33,4 +28,5 @@ Chaque partie est conclu sur un projet en équipe, voir les Repo suivants :
 - Projet 1 : Annuaire de Stagiaires
 - Projet 2 : Réseau Social Automobile
 - Projet 3 : Réseau Associations - Galaxos
+- Projet 4 : (à venir)
 
