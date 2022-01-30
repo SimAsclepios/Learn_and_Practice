@@ -1,0 +1,5 @@
+appli\maven\utils\HibernateUtil.class
+appli\maven\dao\ArticleRepository.class
+appli\maven\dao\Article$Categorie.class
+appli\maven\dao\Article.class
+appli\maven\main\LanceurMain.class
