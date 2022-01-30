@@ -15,7 +15,7 @@ Partie II : Septembre 2021 à Novembre 2021
 
 
 Partie III : Novembre 2021 à Janvier 2022
-- Java EE
+- Java EE : JSP/JSTL/Servlets, JDBC, Hibernate, Spring, JSF, EJB3, JPA
 
 
 Partie IV : Janvier 2022 à Mai 2022
